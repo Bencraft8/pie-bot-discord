@@ -2,8 +2,6 @@ const Commando = require('discord.js-commando');
 const bot = new Commando.Client({
     unknownCommandResponse: false
 });
-const TOKEN = 'NTQ5NDE4MzczMTMwMjIzNjMw.D1TmKw.UMRgQiaG0T4NdGMpppU1BluFrws';
-
 var sendText = "Kim wants you to have a slice of her delicious ";
 
 var pieCount = 0;
