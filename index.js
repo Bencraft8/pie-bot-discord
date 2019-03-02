@@ -18,33 +18,70 @@ var rarePies = ["cheesecake", "prickly pear pie", "peach pie à la mode", "apple
 var legendaryPies = ["creampie", "cow pie"];
 
 bot.on('message', function(message) {
-    if(message.content == "!pie") {
+
+	var sentMessage = message.content.split(" ", 2);
+
+    if(sentMessage[0] == "!pie") {
+
+
         
-        var randomNum = Math.floor(Math.random() * 101);
+		var randomNum = Math.floor(Math.random() * 101);
 
-        if (randomNum >= 0 && randomNum <= 59) {
-			pieCount++;
+		if(sentMessage[1]) {
+			if (randomNum >= 0 && randomNum <= 69) {
+				pieCount++;
 
-			message.channel.sendMessage(  "Here " + message.author  + ", " + sendText + commonPies[Math.floor(Math.random()*commonPies.length)] + "! Kim has given out " + pieCount + " pies on Discord."       );
+				
 
-        }
-        else if (randomNum >= 60 && randomNum <= 96) {
-			pieCount++;
+				message.channel.sendMessage(  "Here " + sentMessage[1]  + ", " + sendText + commonPies[Math.floor(Math.random()*commonPies.length)] + "! Kim has given out " + pieCount + " pies on Discord."       );
 
-            message.channel.sendMessage("Here " + message.author  + ", " + sendText + uncommonPies[Math.floor(Math.random()*uncommonPies.length)] + "! Kim has given out " + pieCount + " pies on Discord."       );
+			}
+			else if (randomNum >= 70 && randomNum <= 96) {
+				pieCount++;
+
+				message.channel.sendMessage("Here " + sentMessage[1]  + ", " + sendText + uncommonPies[Math.floor(Math.random()*uncommonPies.length)] + "! Kim has given out " + pieCount + " pies on Discord."       );
+			
+			}
+			else if (randomNum >= 97 && randomNum <= 99) {
+				pieCount++;
+
+				message.channel.sendMessage("Here " + sentMessage[1]  + ", " + sendText + rarePies[Math.floor(Math.random()*rarePies.length)] + "! Kim has given out " + pieCount + " pies on Discord.");
 		
-		}
-        else if (randomNum >= 97 && randomNum <= 99) {
-			pieCount++;
+			}
+			else if (randomNum == 100) {
+				pieCount++;
 
-            message.channel.sendMessage("Here " + message.author  + ", " + sendText + rarePies[Math.floor(Math.random()*rarePies.length)] + "! Kim has given out " + pieCount + " pies on Discord.");
-	
-		}
-        else if (randomNum == 100) {
-			pieCount++;
+				message.channel.sendMessage("Here " + sentMessage[1]  + ", " + sendText + legendaryPies[Math.floor(Math.random()*legendaryPies.length)] + "! Kim has given out " + pieCount + " pies on Discord.");
+			}
+		} else {
+			if (randomNum >= 0 && randomNum <= 69) {
+				pieCount++;
 
-            message.channel.sendMessage("Here " + message.author  + ", " + sendText + legendaryPies[Math.floor(Math.random()*legendaryPies.length)] + "! Kim has given out " + pieCount + " pies on Discord.");
+				
+
+				message.channel.sendMessage(  "Here " + message.author  + ", " + sendText + commonPies[Math.floor(Math.random()*commonPies.length)] + "! Kim has given out " + pieCount + " pies on Discord."       );
+
+			}
+			else if (randomNum >= 70 && randomNum <= 96) {
+				pieCount++;
+
+				message.channel.sendMessage("Here " + message.author  + ", " + sendText + uncommonPies[Math.floor(Math.random()*uncommonPies.length)] + "! Kim has given out " + pieCount + " pies on Discord."       );
+			
+			}
+			else if (randomNum >= 97 && randomNum <= 99) {
+				pieCount++;
+
+				message.channel.sendMessage("Here " + message.author  + ", " + sendText + rarePies[Math.floor(Math.random()*rarePies.length)] + "! Kim has given out " + pieCount + " pies on Discord.");
+		
+			}
+			else if (randomNum == 100) {
+				pieCount++;
+
+				message.channel.sendMessage("Here " + message.author  + ", " + sendText + legendaryPies[Math.floor(Math.random()*legendaryPies.length)] + "! Kim has given out " + pieCount + " pies on Discord.");
+			}
 		}
+
+			
     }
 });
 
