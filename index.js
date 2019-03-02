@@ -22,13 +22,13 @@ bot.on('message', function(message) {
         
         var randomNum = Math.floor(Math.random() * 101);
 
-        if (randomNum >= 0 && randomNum <= 69) {
+        if (randomNum >= 0 && randomNum <= 59) {
 			pieCount++;
 
 			message.channel.sendMessage(  "Here " + message.author  + ", " + sendText + commonPies[Math.floor(Math.random()*commonPies.length)] + "! Kim has given out " + pieCount + " pies on Discord."       );
 
         }
-        else if (randomNum >= 70 && randomNum <= 96) {
+        else if (randomNum >= 60 && randomNum <= 96) {
 			pieCount++;
 
             message.channel.sendMessage("Here " + message.author  + ", " + sendText + uncommonPies[Math.floor(Math.random()*uncommonPies.length)] + "! Kim has given out " + pieCount + " pies on Discord."       );
