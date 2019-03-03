@@ -4,7 +4,7 @@ const bot = new Commando.Client({
 });
 var sendText = "Kim wants you to have a slice of her delicious ";
 
-var pieCount = 0;
+var pieCount = 173;
 
 var commonPies = ["pumpkin pie", "coconut cream pie", "banana cream pie", "strawberry rhubarb pie", "chocolate cream pie", "blueberry pie", "ice cream pie", 
         "peach pie", "pear pie", "chicken pot pie", "cranberry pie", "pineapple pie", "turtle pie"];
@@ -80,8 +80,12 @@ bot.on('message', function(message) {
 				message.channel.sendMessage("Here " + message.author  + ", " + sendText + legendaryPies[Math.floor(Math.random()*legendaryPies.length)] + "! Kim has given out " + pieCount + " pies on Discord.");
 			}
 		}
-
-			
+	    
+	    
+	    if(pieCount.toString().includes("69")) {
+			message.channel.sendMessage(":smirk:");
+	    }
+	
     }
 });
 
