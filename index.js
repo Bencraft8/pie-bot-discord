@@ -4,7 +4,7 @@ const bot = new Commando.Client({
 });
 var sendText = "Kim wants you to have a slice of her delicious ";
 
-var pieCount = 173;
+var pieCount = 316;
 
 var commonPies = ["pumpkin pie", "coconut cream pie", "banana cream pie", "strawberry rhubarb pie", "chocolate cream pie", "blueberry pie", "ice cream pie", 
         "peach pie", "pear pie", "chicken pot pie", "cranberry pie", "pineapple pie", "turtle pie"];
@@ -21,7 +21,7 @@ bot.on('message', function(message) {
 
 	var sentMessage = message.content.split(" ", 2);
 
-    if(sentMessage[0] == "!pie") {
+    if(sentMessage[0].toLowerCase() == "!pie") {
 
 
         
