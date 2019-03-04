@@ -31,7 +31,6 @@ bot.on('message', function(message) {
 
 				newPie = commonPies[Math.floor(Math.random()*commonPies.length)];
 				//ChangePieCount(newPie);
-				newPie = "pecan pie";
 
 				message.channel.sendMessage(  "Here " + sentMessage[1]  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
@@ -116,7 +115,6 @@ bot.on('message', function(message) {
 
 				newPie = commonPies[Math.floor(Math.random()*commonPies.length)];
 				//ChangePieCount(newPie);
-				newPie = "pecan pie";
 
 				message.channel.sendMessage(  "Here " + message.author  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
