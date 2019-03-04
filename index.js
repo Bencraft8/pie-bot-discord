@@ -31,13 +31,18 @@ bot.on('message', function(message) {
 
 				newPie = commonPies[Math.floor(Math.random()*commonPies.length)];
 				//ChangePieCount(newPie);
+				newPie = "pecan pie";
 
-				message.channel.sendMessage(  "Here " + sentMessage[1]  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (message){
+				message.channel.sendMessage(  "Here " + sentMessage[1]  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
-						message.react("🌵");
+						botSentMessage.react("🌵");
 					}
 					else if (pieCount.toString().includes("69")) {
-						message.react("😏");
+						botSentMessage.react("😏");
+					}
+					else if ((newPie = "pecan pie" && message.author.id == "307350352594862080") || (newPie = "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
+					sentMessage[1].toLowerCase() == "kec" || sentMessage[1].toLowerCase() == "cactus" || sentMessage[1].toLowerCase() == "kacatas"))) {
+						botSentMessage.react("😂");
 					}
 				});
 
@@ -49,12 +54,16 @@ bot.on('message', function(message) {
 				newPie = uncommonPies[Math.floor(Math.random()*uncommonPies.length)];
 				//ChangePieCount(newPie);
 
-				message.channel.sendMessage("Here " + sentMessage[1]  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (message){
+				message.channel.sendMessage("Here " + sentMessage[1]  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
-						message.react("🌵");
+						botSentMessage.react("🌵");
 					}
 					else if (pieCount.toString().includes("69")) {
-						message.react("😏");
+						botSentMessage.react("😏");
+					}
+					else if ((newPie = "pecan pie" && message.author.id == "307350352594862080") || (newPie = "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
+					sentMessage[1].toLowerCase() == "kec" || sentMessage[1].toLowerCase() == "cactus" || sentMessage[1].toLowerCase() == "kacatas"))) {
+						botSentMessage.react("😂");
 					}
 				});
 			}
@@ -64,12 +73,16 @@ bot.on('message', function(message) {
 				newPie = rarePies[Math.floor(Math.random()*rarePies.length)];
 				//ChangePieCount(newPie);
 
-				message.channel.sendMessage("Here " + sentMessage[1]  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (message){
+				message.channel.sendMessage("Here " + sentMessage[1]  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
-						message.react("🌵");
+						botSentMessage.react("🌵");
 					}
 					else if (pieCount.toString().includes("69")) {
-						message.react("😏");
+						botSentMessage.react("😏");
+					}
+					else if ((newPie = "pecan pie" && message.author.id == "307350352594862080") || (newPie = "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
+					sentMessage[1].toLowerCase() == "kec" || sentMessage[1].toLowerCase() == "cactus" || sentMessage[1].toLowerCase() == "kacatas"))) {
+						botSentMessage.react("😂");
 					}
 				});
 			}
@@ -79,12 +92,16 @@ bot.on('message', function(message) {
 				newPie = legendaryPies[Math.floor(Math.random()*legendaryPies.length)];
 				//ChangePieCount(newPie);
 
-				message.channel.sendMessage("Here " + sentMessage[1]  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (message){
+				message.channel.sendMessage("Here " + sentMessage[1]  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
 						message.react("🌵");
 					}
 					else if (pieCount.toString().includes("69")) {
-						message.react("😏");
+						botSentMessage.react("😏");
+					}
+					else if ((newPie = "pecan pie" && message.author.id == "307350352594862080") || (newPie = "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
+					sentMessage[1].toLowerCase() == "kec" || sentMessage[1].toLowerCase() == "cactus" || sentMessage[1].toLowerCase() == "kacatas"))) {
+						botSentMessage.react("😂");
 					}
 				});
 			}
@@ -99,13 +116,19 @@ bot.on('message', function(message) {
 
 				newPie = commonPies[Math.floor(Math.random()*commonPies.length)];
 				//ChangePieCount(newPie);
+				newPie = "pecan pie";
 
-				message.channel.sendMessage(  "Here " + message.author  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (message){
+				message.channel.sendMessage(  "Here " + message.author  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
-						message.react("🌵");
+						botSentMessage.react("🌵");
 					}
+					
 					else if (pieCount.toString().includes("69")) {
-						message.react("😏");
+						botSentMessage.react("😏");
+					}
+					else if ((newPie = "pecan pie" && message.author.id == "307350352594862080") || (newPie = "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
+					sentMessage[1].toLowerCase() == "kec" || sentMessage[1].toLowerCase() == "cactus" || sentMessage[1].toLowerCase() == "kacatas"))) {
+						botSentMessage.react("😂");
 					}
 				});
 
@@ -116,12 +139,16 @@ bot.on('message', function(message) {
 				newPie = uncommonPies[Math.floor(Math.random()*uncommonPies.length)];
 				//ChangePieCount(newPie);
 
-				message.channel.sendMessage("Here " + message.author  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (message){
+				message.channel.sendMessage("Here " + message.author  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
-						message.react("🌵");
+						botSentMessage.react("🌵");
 					}
 					else if (pieCount.toString().includes("69")) {
-						message.react("😏");
+						botSentMessage.react("😏");
+					}
+					else if ((newPie = "pecan pie" && message.author.id == "307350352594862080") || (newPie = "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
+					sentMessage[1].toLowerCase() == "kec" || sentMessage[1].toLowerCase() == "cactus" || sentMessage[1].toLowerCase() == "kacatas"))) {
+						botSentMessage.react("😂");
 					}
 				});
 			
@@ -132,12 +159,16 @@ bot.on('message', function(message) {
 				newPie = rarePies[Math.floor(Math.random()*rarePies.length)];
 				//ChangePieCount(newPie);
 
-				message.channel.sendMessage("Here " + message.author  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (message){
+				message.channel.sendMessage("Here " + message.author  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
-						message.react("🌵");
+						botSentMessage.react("🌵");
 					}
 					else if (pieCount.toString().includes("69")) {
-						message.react("😏");
+						botSentMessage.react("😏");
+					}
+					else if ((newPie = "pecan pie" && message.author.id == "307350352594862080") || (newPie = "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
+					sentMessage[1].toLowerCase() == "kec" || sentMessage[1].toLowerCase() == "cactus" || sentMessage[1].toLowerCase() == "kacatas"))) {
+						botSentMessage.react("😂");
 					}
 				});
 		
@@ -148,12 +179,16 @@ bot.on('message', function(message) {
 				newPie = legendaryPies[Math.floor(Math.random()*legendaryPies.length)];
 				//ChangePieCount(newPie);
 
-				message.channel.sendMessage("Here " + message.author  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (message){
+				message.channel.sendMessage("Here " + message.author  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
-						message.react("🌵");
+						botSentMessage.react("🌵");
 					}
 					else if (pieCount.toString().includes("69")) {
-						message.react("😏");
+						botSentMessage.react("😏");
+					}
+					else if ((newPie = "pecan pie" && message.author.id == "307350352594862080") || (newPie = "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
+					sentMessage[1].toLowerCase() == "kec" || sentMessage[1].toLowerCase() == "cactus" || sentMessage[1].toLowerCase() == "kacatas"))) {
+						botSentMessage.react("😂");
 					}
 				});
 			}
