@@ -110,7 +110,7 @@ bot.on('message', function(message) {
 		
 		
 		else {
-			if (randomNum >= 0 && randomNum <= 0) {
+			if (randomNum >= 0 && randomNum <= 59) {
 				pieCount++;
 
 				newPie = commonPies[Math.floor(Math.random()*commonPies.length)];
@@ -131,7 +131,7 @@ bot.on('message', function(message) {
 				});
 
 			}
-			else if (randomNum >= 0 && randomNum <= 0) {
+			else if (randomNum >= 60 && randomNum <= 96) {
 				pieCount++;
 
 				newPie = uncommonPies[Math.floor(Math.random()*uncommonPies.length)];
@@ -151,7 +151,7 @@ bot.on('message', function(message) {
 				});
 			
 			}
-			else if (randomNum >= 0 && randomNum <= 99) {
+			else if (randomNum >= 97 && randomNum <= 99) {
 				pieCount++;
 
 				newPie = rarePies[Math.floor(Math.random()*rarePies.length)];
