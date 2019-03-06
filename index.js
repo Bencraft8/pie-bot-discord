@@ -15,7 +15,7 @@ var uncommonPies = ["apple pie", "cherry pie", "key lime pie", "lemon meringue p
 var rarePies = ["cheesecake", "prickly pear pie", "peach pie à la mode", "apple pie à la mode", "blackberry pie à la mode", "cherry pie à la mode",
         "raspberry pie à la mode", "blueberry pie à la mode"];
 
-var legendaryPies = ["creampie", "cow pie"];
+var legendaryPies = ["creampie", "cow pie", "cutie pie"];
 
 bot.on('message', function(message) {
 
