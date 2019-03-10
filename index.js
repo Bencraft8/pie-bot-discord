@@ -79,7 +79,7 @@ bot.on('message', function(message) {
 					else if (pieCount.toString().includes("69")) {
 						botSentMessage.react("😏");
 					}
-					else if ((newPie = "pecan pie" && message.author.id == "307350352594862080") || (newPie = "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
+					else if ((newPie == "pecan pie" && message.author.id == "307350352594862080") || (newPie == "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
 					sentMessage[1].toLowerCase() == "kec" || sentMessage[1].toLowerCase() == "cactus" || sentMessage[1].toLowerCase() == "kacatas"))) {
 						botSentMessage.react("😂");
 					}
@@ -110,7 +110,7 @@ bot.on('message', function(message) {
 		
 		
 		else {
-			if (randomNum >= 0 && randomNum <= 59) {
+			if (randomNum >= 0 && randomNum <= 69) {
 				pieCount++;
 
 				newPie = commonPies[Math.floor(Math.random()*commonPies.length)];
@@ -124,14 +124,13 @@ bot.on('message', function(message) {
 					else if (pieCount.toString().includes("69")) {
 						botSentMessage.react("😏");
 					}
-					else if ((newPie == "pecan pie" && message.author.id == "307350352594862080") || (newPie == "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
-					sentMessage[1].toLowerCase() == "kec" || sentMessage[1].toLowerCase() == "cactus" || sentMessage[1].toLowerCase() == "kacatas"))) {
+					else if (newPie == "pecan pie" && message.author.id == "307350352594862080") {
 						botSentMessage.react("😂");
 					}
 				});
 
 			}
-			else if (randomNum >= 60 && randomNum <= 96) {
+			else if (randomNum >= 70 && randomNum <= 96) {
 				pieCount++;
 
 				newPie = uncommonPies[Math.floor(Math.random()*uncommonPies.length)];
@@ -144,8 +143,7 @@ bot.on('message', function(message) {
 					else if (pieCount.toString().includes("69")) {
 						botSentMessage.react("😏");
 					}
-					else if ((newPie == "pecan pie" && message.author.id == "307350352594862080") || (newPie == "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
-					sentMessage[1].toLowerCase() == "kec" || sentMessage[1].toLowerCase() == "cactus" || sentMessage[1].toLowerCase() == "kacatas"))) {
+					else if (newPie == "pecan pie" && message.author.id == "307350352594862080") {
 						botSentMessage.react("😂");
 					}
 				});
@@ -164,8 +162,7 @@ bot.on('message', function(message) {
 					else if (pieCount.toString().includes("69")) {
 						botSentMessage.react("😏");
 					}
-					else if ((newPie == "pecan pie" && message.author.id == "307350352594862080") || (newPie == "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
-					sentMessage[1].toLowerCase() == "kec" || sentMessage[1].toLowerCase() == "cactus" || sentMessage[1].toLowerCase() == "kacatas"))) {
+					else if (newPie == "pecan pie" && message.author.id == "307350352594862080") {
 						botSentMessage.react("😂");
 					}
 				});
@@ -184,13 +181,12 @@ bot.on('message', function(message) {
 					else if (pieCount.toString().includes("69")) {
 						botSentMessage.react("😏");
 					}
-					else if ((newPie == "pecan pie" && message.author.id == "307350352594862080") || (newPie == "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
-					sentMessage[1].toLowerCase() == "kec" || sentMessage[1].toLowerCase() == "cactus" || sentMessage[1].toLowerCase() == "kacatas"))) {
+					else if (newPie == "pecan pie" && message.author.id == "307350352594862080") {
 						botSentMessage.react("😂");
 					}
 				});
 			}
-		}	
+		}
 	}
 });
 
