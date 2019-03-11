@@ -39,7 +39,7 @@ bot.on('message', function(message) {
 					else if (pieCount.toString().includes("69")) {
 						botSentMessage.react("😏");
 					}
-					else if ((newPie == "pecan pie" && message.author.id == "307350352594862080") || (newPie == "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
+					else if ((newPie == "pecan pie" && message.author.id.toString() == "307350352594862080") || (newPie == "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
 					sentMessage[1].toLowerCase() == "kec" || sentMessage[1].toLowerCase() == "cactus" || sentMessage[1].toLowerCase() == "kacatas"))) {
 						botSentMessage.react("😂");
 					}
@@ -60,7 +60,7 @@ bot.on('message', function(message) {
 					else if (pieCount.toString().includes("69")) {
 						botSentMessage.react("😏");
 					}
-					else if ((newPie == "pecan pie" && message.author.id == "307350352594862080") || (newPie == "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
+					else if ((newPie == "pecan pie" && message.author.id.toString() == "307350352594862080") || (newPie == "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
 					sentMessage[1].toLowerCase() == "kec" || sentMessage[1].toLowerCase() == "cactus" || sentMessage[1].toLowerCase() == "kacatas"))) {
 						botSentMessage.react("😂");
 					}
@@ -79,7 +79,7 @@ bot.on('message', function(message) {
 					else if (pieCount.toString().includes("69")) {
 						botSentMessage.react("😏");
 					}
-					else if ((newPie == "pecan pie" && message.author.id == "307350352594862080") || (newPie == "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
+					else if ((newPie == "pecan pie" && message.author.id.toString() == "307350352594862080") || (newPie == "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
 					sentMessage[1].toLowerCase() == "kec" || sentMessage[1].toLowerCase() == "cactus" || sentMessage[1].toLowerCase() == "kacatas"))) {
 						botSentMessage.react("😂");
 					}
@@ -98,7 +98,7 @@ bot.on('message', function(message) {
 					else if (pieCount.toString().includes("69")) {
 						botSentMessage.react("😏");
 					}
-					else if ((newPie == "pecan pie" && message.author.id == "307350352594862080") || (newPie == "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
+					else if ((newPie == "pecan pie" && message.author.id.toString() == "307350352594862080") || (newPie == "pecan pie" && (sentMessage[1].toLowerCase() == "kecatas" || 
 					sentMessage[1].toLowerCase() == "kec" || sentMessage[1].toLowerCase() == "cactus" || sentMessage[1].toLowerCase() == "kacatas"))) {
 						botSentMessage.react("😂");
 					}
@@ -124,7 +124,7 @@ bot.on('message', function(message) {
 					else if (pieCount.toString().includes("69")) {
 						botSentMessage.react("😏");
 					}
-					else if (newPie == "pecan pie" && message.author.id == "307350352594862080") {
+					else if (newPie == "pecan pie" && message.author.id.toString() == "307350352594862080") {
 						botSentMessage.react("😂");
 					}
 				});
@@ -143,7 +143,7 @@ bot.on('message', function(message) {
 					else if (pieCount.toString().includes("69")) {
 						botSentMessage.react("😏");
 					}
-					else if (newPie == "pecan pie" && message.author.id == "307350352594862080") {
+					else if (newPie == "pecan pie" && message.author.id.toString() == "307350352594862080") {
 						botSentMessage.react("😂");
 					}
 				});
@@ -162,7 +162,7 @@ bot.on('message', function(message) {
 					else if (pieCount.toString().includes("69")) {
 						botSentMessage.react("😏");
 					}
-					else if (newPie == "pecan pie" && message.author.id == "307350352594862080") {
+					else if (newPie == "pecan pie" && message.author.id.toString() == "307350352594862080") {
 						botSentMessage.react("😂");
 					}
 				});
@@ -181,7 +181,7 @@ bot.on('message', function(message) {
 					else if (pieCount.toString().includes("69")) {
 						botSentMessage.react("😏");
 					}
-					else if (newPie == "pecan pie" && message.author.id == "307350352594862080") {
+					else if (newPie == "pecan pie" && message.author.id.toString() == "307350352594862080") {
 						botSentMessage.react("😂");
 					}
 				});
