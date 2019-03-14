@@ -28,7 +28,7 @@ bot.on('message', function(message) {
 
 		if(sentMessage[1]) {
 			if (randomNum >= 0 && randomNum <= 69) {
-				pieCount++;
+				//pieCount++;
 
 				newPie = commonPies[Math.floor(Math.random()*commonPies.length)];
 				//ChangePieCount(newPie);
@@ -49,7 +49,7 @@ bot.on('message', function(message) {
 			}
 			
 			else if (randomNum >= 70 && randomNum <= 96) {
-				pieCount++;
+				//pieCount++;
 
 				newPie = uncommonPies[Math.floor(Math.random()*uncommonPies.length)];
 				//ChangePieCount(newPie);
@@ -68,7 +68,7 @@ bot.on('message', function(message) {
 				});
 			}
 			else if (randomNum >= 97 && randomNum <= 99) {
-				pieCount++;
+				//pieCount++;
 
 				newPie = rarePies[Math.floor(Math.random()*rarePies.length)];
 				//ChangePieCount(newPie);
@@ -87,7 +87,7 @@ bot.on('message', function(message) {
 				});
 			}
 			else if (randomNum == 100) {
-				pieCount++;
+				//pieCount++;
 
 				newPie = legendaryPies[Math.floor(Math.random()*legendaryPies.length)];
 				//ChangePieCount(newPie);
@@ -112,7 +112,7 @@ bot.on('message', function(message) {
 		
 		else {
 			if (randomNum >= 0 && randomNum <= 69) {
-				pieCount++;
+				//pieCount++;
 
 				newPie = commonPies[Math.floor(Math.random()*commonPies.length)];
 				//ChangePieCount(newPie);
@@ -132,7 +132,7 @@ bot.on('message', function(message) {
 
 			}
 			else if (randomNum >= 70 && randomNum <= 96) {
-				pieCount++;
+				//pieCount++;
 
 				newPie = uncommonPies[Math.floor(Math.random()*uncommonPies.length)];
 				//ChangePieCount(newPie);
@@ -151,7 +151,7 @@ bot.on('message', function(message) {
 			
 			}
 			else if (randomNum >= 97 && randomNum <= 99) {
-				pieCount++;
+				//pieCount++;
 
 				newPie = rarePies[Math.floor(Math.random()*rarePies.length)];
 				//ChangePieCount(newPie);
@@ -170,7 +170,7 @@ bot.on('message', function(message) {
 		
 			}
 			else if (randomNum == 100) {
-				pieCount++;
+				//pieCount++;
 
 				newPie = legendaryPies[Math.floor(Math.random()*legendaryPies.length)];
 				//ChangePieCount(newPie);
