@@ -190,6 +190,12 @@ bot.on('message', function(message) {
 	}
 });
 
+bot.on('uncaughtException', (err) => {
+	console.error('There was an uncaught error', err);
+	bot.sendMessage(err);
+	bot.exit(1); //mandatory (as per the Node docs)
+});	
+
 bot.on('ready', function() {
     console.log("Ready!");
 });
