@@ -4,7 +4,7 @@ const bot = new Commando.Client({
 });
 var sendText = "Kim wants you to have a slice of her delicious ";
 
-var pieCount = 1300;
+var pieCount = 1325;
 
 var commonPies = ["pumpkin pie", "coconut cream pie", "banana cream pie", "strawberry rhubarb pie", "chocolate cream pie", "blueberry pie", "ice cream pie", 
         "peach pie", "pear pie", "chicken pot pie", "cranberry pie", "pineapple pie", "turtle pie"];
@@ -32,7 +32,7 @@ bot.on('message', function(message) {
 				newPie = commonPies[Math.floor(Math.random()*commonPies.length)];
 				//ChangePieCount(newPie);
 
-				message.channel.sendMessage(  "Here, " + sentMessage[1]  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+				message.channel.sendMessage(  "Here, " + sentMessage[1]  + "! " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
 						botSentMessage.react("🌵");
 					}
@@ -53,7 +53,7 @@ bot.on('message', function(message) {
 				newPie = uncommonPies[Math.floor(Math.random()*uncommonPies.length)];
 				//ChangePieCount(newPie);
 
-				message.channel.sendMessage("Here, " + sentMessage[1]  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+				message.channel.sendMessage("Here, " + sentMessage[1]  + "! " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
 						botSentMessage.react("🌵");
 					}
@@ -72,7 +72,7 @@ bot.on('message', function(message) {
 				newPie = rarePies[Math.floor(Math.random()*rarePies.length)];
 				//ChangePieCount(newPie);
 
-				message.channel.sendMessage("Here, " + sentMessage[1]  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+				message.channel.sendMessage("Here, " + sentMessage[1]  + "! " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
 						botSentMessage.react("🌵");
 					}
@@ -91,7 +91,7 @@ bot.on('message', function(message) {
 				newPie = legendaryPies[Math.floor(Math.random()*legendaryPies.length)];
 				//ChangePieCount(newPie);
 
-				message.channel.sendMessage("Here, " + sentMessage[1]  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+				message.channel.sendMessage("Here, " + sentMessage[1]  + "! " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
 						message.react("🌵");
 					}
@@ -116,7 +116,7 @@ bot.on('message', function(message) {
 				newPie = commonPies[Math.floor(Math.random()*commonPies.length)];
 				//ChangePieCount(newPie);
 
-				message.channel.sendMessage(  "Here, " + message.author  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+				message.channel.sendMessage(  "Here, " + message.author  + "! " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
 						botSentMessage.react("🌵");
 					}
@@ -136,7 +136,7 @@ bot.on('message', function(message) {
 				newPie = uncommonPies[Math.floor(Math.random()*uncommonPies.length)];
 				//ChangePieCount(newPie);
 
-				message.channel.sendMessage("Here, " + message.author  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+				message.channel.sendMessage("Here, " + message.author  + "! " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
 						botSentMessage.react("🌵");
 					}
@@ -155,7 +155,7 @@ bot.on('message', function(message) {
 				newPie = rarePies[Math.floor(Math.random()*rarePies.length)];
 				//ChangePieCount(newPie);
 
-				message.channel.sendMessage("Here, " + message.author  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+				message.channel.sendMessage("Here, " + message.author  + "! " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
 						botSentMessage.react("🌵");
 					}
@@ -174,7 +174,7 @@ bot.on('message', function(message) {
 				newPie = legendaryPies[Math.floor(Math.random()*legendaryPies.length)];
 				//ChangePieCount(newPie);
 
-				message.channel.sendMessage("Here, " + message.author  + ", " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+				message.channel.sendMessage("Here, " + message.author  + "! " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 					if(newPie == "prickly pear pie") {
 						botSentMessage.react("🌵");
 					}
@@ -188,13 +188,14 @@ bot.on('message', function(message) {
 			}
 		}
 	}
-});
 
-bot.on('uncaughtException', (err) => {
-	console.error('There was an uncaught error', err);
-	bot.sendMessage(err);
-	bot.exit(1); //mandatory (as per the Node docs)
-});	
+	bot.on('uncaughtException', (err) => {
+		console.error('There was an uncaught error', err);
+		message.channel.sendMessage(err);
+		bot.exit(1); //mandatory (as per the Node docs)
+	});
+
+});
 
 bot.on('ready', function() {
     console.log("Ready!");
