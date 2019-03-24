@@ -2,6 +2,9 @@ const Commando = require('discord.js-commando');
 const bot = new Commando.Client({
     unknownCommandResponse: false
 });
+
+require('events').EventEmitter.defaultMaxListeners = 20;
+
 var sendText = "Kim wants you to have a slice of her delicious ";
 
 var pieCount = 1325;
