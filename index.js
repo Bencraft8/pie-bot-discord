@@ -60,18 +60,25 @@ bot.on('message', function(message) {
  
             pieCount++
  
-        message.channel.send("Here, " + piePerson + "! " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
-            if(newPie == "prickly pear pie") {
-                botSentMessage.react("🌵");
-            }
-            else if (pieCount.toString().includes("69")) {
-                botSentMessage.react("😏");
-            }
-            else if ((newPie == "pecan pie" && message.author.id.toString() == "307350352594862080") || (newPie == "pecan pie" && (piePerson.toLowerCase() == "kecatas" ||
-            piePerson.toLowerCase() == "kec" || piePerson.toLowerCase() == "cactus" || piePerson.toLowerCase() == "kacatas"))) {
-                botSentMessage.react("😂");
-            }
-        });
+            var randomNum2 = Math.floor(Math.random() * 101);
+	    
+            if(randomNum2 > 95) {
+                message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + newPie + ". Kim has given out " + pieCount + " pies on Discord.")
+            } else {
+
+                message.channel.send("Here, " + piePerson + "! " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+                    if(newPie == "prickly pear pie") {
+                        botSentMessage.react("🌵");
+                    }
+                    else if (pieCount.toString().includes("69")) {
+                        botSentMessage.react("😏");
+                    }
+                    else if ((newPie == "pecan pie" && message.author.id.toString() == "307350352594862080") || (newPie == "pecan pie" && (piePerson.toLowerCase() == "kecatas" ||
+                    piePerson.toLowerCase() == "kec" || piePerson.toLowerCase() == "cactus" || piePerson.toLowerCase() == "kacatas"))) {
+                        botSentMessage.react("😂");
+                    }
+                });
+            }   
 
         bot.channels.get("560345281577877514").send(pieCount);
 
