@@ -51,7 +51,7 @@ bot.on('message', function(message) {
         }
  
         pieCount++
-        newPie = "pecan pie";
+
         message.channel.sendMessage("Here, " + piePerson + "! " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
                             if(newPie == "prickly pear pie") {
                                 botSentMessage.react("🌵");
