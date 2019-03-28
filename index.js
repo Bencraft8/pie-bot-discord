@@ -7,7 +7,7 @@ require('events').EventEmitter.defaultMaxListeners = 20;
  
 var pieCount;
 
-var sendText = "Kim wants you to have a slice of her delicious ";
+var sendText = "Kim wants you to have a slice of her ";
  
 var commonPies = ["pumpkin pie", "coconut cream pie", "banana cream pie", "strawberry rhubarb pie", "chocolate cream pie", "blueberry pie", "ice cream pie",
     "peach pie", "pear pie", "chicken pot pie", "cranberry pie", "pineapple pie", "turtle pie"
@@ -22,6 +22,8 @@ var rarePies = ["cheesecake", "prickly pear pie", "peach pie à la mode", "apple
 ];
 
 var legendaryPies = ["creampie", "cow pie", "cutie pie"];
+
+var adjectives = ["delicious", "tasty", "scrumptious", "heavenly", "delectable", "delightful", "yummy"]
  
 bot.on('ready', function() {
     console.log("Ready!");
@@ -40,8 +42,9 @@ bot.on('message', function(message) {
     if (sentMessage[0].toLowerCase() == "!pie") {
  
         var randomNum = Math.floor(Math.random() * 101);
+        var randomNumAdj = Math.floor(Math.random() * 7) + 1;
  
-        switch (true) {
+        switch (true) { 
           case (randomNum < 70):
             newPie = commonPies[Math.floor(Math.random() * commonPies.length)];
             break;
@@ -59,18 +62,20 @@ bot.on('message', function(message) {
         }
  
             pieCount++
+
+            pieAdj = adjectives[Math.floor(Math.random() * adjectives.length)];
  
             var randomNum2 = Math.floor(Math.random() * 101);
 
-            if(randomNum2 > 95) {
+            if(randomNum2 > 5) {
 
-                message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + newPie + ". Kim has given out " + pieCount + " pies on Discord.");
+                message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + " " + newPie + ". Kim has given out " + pieCount + " pies on Discord.");
 
             }
 
             else {
 
-                message.channel.send("Here, " + piePerson + "! " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+                message.channel.send("Here, " + piePerson + "! " + sendText + pieAdj + " "  + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
                     if(newPie == "prickly pear pie") {
                         botSentMessage.react("🌵");
                     }
