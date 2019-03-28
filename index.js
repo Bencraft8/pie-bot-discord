@@ -35,7 +35,7 @@ bot.on('message', function(message) {
  
     var sentMessage = message.content.split(" ", 2);
  
-    var piePerson = sentMessage[1] ? sentMessage[1] : message.author
+    var piePerson = sentMessage[1] ? sentMessage[1] : message.author;
  
     if (sentMessage[0].toLowerCase() == "!pie") {
  
