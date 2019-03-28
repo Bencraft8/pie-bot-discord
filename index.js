@@ -63,7 +63,7 @@ bot.on('message', function(message) {
             var randomNum2 = Math.floor(Math.random() * 101);
 	    
             if(randomNum2 > 95) {
-                message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + newPie + ". Kim has given out " + pieCount + " pies on Discord.")
+                message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + newPie + ". Kim has given out " + pieCount + " pies on Discord.");
             } else {
 
                 message.channel.send("Here, " + piePerson + "! " + sendText + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
