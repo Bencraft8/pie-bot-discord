@@ -70,7 +70,16 @@ bot.on('message', function(message) {
             if(randomNum2 > 95 && message.author.id != "117120898992963591") {
 
                 message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + " " + newPie + ". Kim has given out " + pieCount + " pies on Discord.");
-
+		    if(newPie == "prickly pear pie") {
+		    botSentMessage.react("🌵");
+		    }
+		    else if (pieCount.toString().includes("69")) {
+			botSentMessage.react("😏");
+		    }
+		    else if ((newPie == "pecan pie" && message.author.id.toString() == "307350352594862080") || (newPie == "pecan pie" && (piePerson.toLowerCase() == "kecatas" ||
+		    piePerson.toLowerCase() == "kec" || piePerson.toLowerCase() == "cactus" || piePerson.toLowerCase() == "kacatas"))) {
+			botSentMessage.react("😂");
+		    }
             }
 
             else {
