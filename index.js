@@ -67,7 +67,7 @@ bot.on('message', function(message) {
  
             var randomNum2 = Math.floor(Math.random() * 101);
 
-            if(randomNum2 > 95) {
+            if(randomNum2 > 95 && message.author.id != "117120898992963591") {
 
                 message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + " " + newPie + ". Kim has given out " + pieCount + " pies on Discord.");
 
