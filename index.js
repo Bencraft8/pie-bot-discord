@@ -45,7 +45,7 @@ bot.on('message', function(message) {
         var randomNumAdj = Math.floor(Math.random() * 7) + 1;
  
         switch (true) { 
-          case (randomNum < 70):
+          case (randomNum < 60):
             newPie = commonPies[Math.floor(Math.random() * commonPies.length)];
             break;
           case (randomNum < 97):
@@ -106,7 +106,7 @@ bot.on('message', function(message) {
 	} else if (sentMessage[0].toLowerCase() == "!menu") {
         if(message.channel.id == "459566179615506442" || message.channel.id == "369001523453231105") {
             message.channel.send(
-                "**Common Pies (70%):**" + "\n" +
+                "**Common Pies (60%):**" + "\n" +
                 " - " + commonPies + "\n" +
     
                 "**Uncommon Pies (36%):**" + "\n" +
