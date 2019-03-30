@@ -9,19 +9,19 @@ var pieCount;
 
 var sendText = "Kim wants you to have a slice of her ";
  
-var commonPies = ["pumpkin pie", "coconut cream pie", "banana cream pie", "strawberry rhubarb pie", "chocolate cream pie", "blueberry pie", "ice cream pie",
-    "peach pie", "pear pie", "chicken pot pie", "cranberry pie", "pineapple pie", "turtle pie"
+var commonPies = [" pumpkin pie", " coconut cream pie", " banana cream pie", " strawberry rhubarb pie", " chocolate cream pie", " blueberry pie", " ice cream pie",
+    "peach pie", " pear pie", " chicken pot pie", " cranberry pie", " pineapple pie", " turtle pie"
 ];
  
-var uncommonPies = ["apple pie", "cherry pie", "key lime pie", "lemon meringue pie", "blackberry pie", "raspberry pie", "pecan pie",
-    "strawberry pie", "french silk pie", "custard pie", "chocolate peanut butter pie", "butterscotch pie", "mississippi mud pie", "caramel apple pie", "pizza pie"
+var uncommonPies = ["apple pie", " cherry pie", " key lime pie", " lemon meringue pie", " blackberry pie", " raspberry pie", " pecan pie",
+    "strawberry pie", " french silk pie", " custard pie", " chocolate peanut butter pie", " butterscotch pie", " mississippi mud pie", " caramel apple pie", " pizza pie"
 ];
  
-var rarePies = ["cheesecake", "prickly pear pie", "peach pie à la mode", "apple pie à la mode", "blackberry pie à la mode", "cherry pie à la mode",
-    "raspberry pie à la mode", "blueberry pie à la mode"
+var rarePies = ["cheesecake", " prickly pear pie", " peach pie à la mode", " apple pie à la mode", " blackberry pie à la mode", " cherry pie à la mode",
+    "raspberry pie à la mode", " blueberry pie à la mode"
 ];
 
-var legendaryPies = ["creampie", "cow pie", "cutie pie"];
+var legendaryPies = ["creampie", " cow pie", " cutie pie"];
 
 var adjectives = ["delicious", "tasty", "scrumptious", "heavenly", "delectable", "delightful", "yummy"]
  
@@ -69,22 +69,24 @@ bot.on('message', function(message) {
 
             if(randomNum2 > 95 && message.author.id != "117120898992963591") {
 
-                message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + " " + newPie + ". Kim has given out " + pieCount + " pies on Discord.");
-		    if(newPie == "prickly pear pie") {
-		    botSentMessage.react("🌵");
-		    }
-		    else if (pieCount.toString().includes("69")) {
-			botSentMessage.react("😏");
-		    }
-		    else if ((newPie == "pecan pie" && message.author.id.toString() == "307350352594862080") || (newPie == "pecan pie" && (piePerson.toLowerCase() == "kecatas" ||
-		    piePerson.toLowerCase() == "kec" || piePerson.toLowerCase() == "cactus" || piePerson.toLowerCase() == "kacatas"))) {
-			botSentMessage.react("😂");
-		    }
+                message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + newPie + ". Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+                    if(newPie == "prickly pear pie") {
+                        botSentMessage.react("🌵");
+                    }
+                    else if (pieCount.toString().includes("69")) {
+                        botSentMessage.react("😏");
+                    }
+                    else if ((newPie == "pecan pie" && message.author.id.toString() == "307350352594862080") || (newPie == "pecan pie" && (piePerson.toLowerCase() == "kecatas" ||
+                    piePerson.toLowerCase() == "kec" || piePerson.toLowerCase() == "cactus" || piePerson.toLowerCase() == "kacatas"))) {
+                        botSentMessage.react("😂");
+                    }
+                });
+
             }
 
             else {
 
-                message.channel.send("Here, " + piePerson + "! " + sendText + pieAdj + " "  + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+                message.channel.send("Here, " + piePerson + "! " + sendText + pieAdj + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
                     if(newPie == "prickly pear pie") {
                         botSentMessage.react("🌵");
                     }
@@ -101,7 +103,29 @@ bot.on('message', function(message) {
 
         bot.channels.get("560345281577877514").send(pieCount);
 
-	}
+	} else if (sentMessage[0].toLowerCase() == "!menu") {
+        if(message.channel.id == "459566179615506442" || message.channel.id == "369001523453231105") {
+            message.channel.send(
+                "**Common Pies:**" + "\n" +
+                " - " + commonPies + "\n" +
+    
+                "**Uncommon Pies:**" + "\n" +
+                " - " + uncommonPies + "\n" +
+    
+                "**Rare Pies:**" + "\n" +
+                " - " + rarePies + "\n" +
+    
+                "**Legendary Pies:**" + "\n" +
+                " - " + legendaryPies + "\n" +
+    
+                "**Total:**" + "\n" +
+                " - " + (commonPies.length + uncommonPies.length + rarePies.length + legendaryPies.length) + " pies"
+            );
+        } else {
+            message.channel.send("Sorry, I can only show the menu in #pies_of_exile to prevent spam.")
+        }
+        
+    }
 });
 
 bot.login(process.env.BOT_TOKEN);
