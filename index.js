@@ -106,16 +106,16 @@ bot.on('message', function(message) {
 	} else if (sentMessage[0].toLowerCase() == "!menu") {
         if(message.channel.id == "459566179615506442" || message.channel.id == "369001523453231105") {
             message.channel.send(
-                "**Common Pies:**" + "\n" +
+                "**Common Pies (70%):**" + "\n" +
                 " - " + commonPies + "\n" +
     
-                "**Uncommon Pies:**" + "\n" +
+                "**Uncommon Pies (36%):**" + "\n" +
                 " - " + uncommonPies + "\n" +
     
-                "**Rare Pies:**" + "\n" +
+                "**Rare Pies (3%):**" + "\n" +
                 " - " + rarePies + "\n" +
     
-                "**Legendary Pies:**" + "\n" +
+                "**Legendary Pies (1%):**" + "\n" +
                 " - " + legendaryPies + "\n" +
     
                 "**Total:**" + "\n" +
