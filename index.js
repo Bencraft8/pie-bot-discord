@@ -10,18 +10,18 @@ var pieCount;
 var sendText = "Kim wants you to have a slice of her ";
  
 var commonPies = [" pumpkin pie", " coconut cream pie", " banana cream pie", " strawberry rhubarb pie", " chocolate cream pie", " blueberry pie", " ice cream pie",
-    "peach pie", " pear pie", " chicken pot pie", " cranberry pie", " pineapple pie", " turtle pie"
+    " peach pie", " pear pie", " chicken pot pie", " cranberry pie", " pineapple pie", " turtle pie"
 ];
  
-var uncommonPies = ["apple pie", " cherry pie", " key lime pie", " lemon meringue pie", " blackberry pie", " raspberry pie", " pecan pie",
-    "strawberry pie", " french silk pie", " custard pie", " chocolate peanut butter pie", " butterscotch pie", " mississippi mud pie", " caramel apple pie", " pizza pie"
+var uncommonPies = [" apple pie", " cherry pie", " key lime pie", " lemon meringue pie", " blackberry pie", " raspberry pie", " pecan pie",
+    " strawberry pie", " french silk pie", " custard pie", " chocolate peanut butter pie", " butterscotch pie", " mississippi mud pie", " caramel apple pie", " pizza pie"
 ];
  
-var rarePies = ["cheesecake", " prickly pear pie", " peach pie à la mode", " apple pie à la mode", " blackberry pie à la mode", " cherry pie à la mode",
-    "raspberry pie à la mode", " blueberry pie à la mode"
+var rarePies = [" cheesecake", " prickly pear pie", " peach pie à la mode", " apple pie à la mode", " blackberry pie à la mode", " cherry pie à la mode",
+    " raspberry pie à la mode", " blueberry pie à la mode"
 ];
 
-var legendaryPies = ["creampie", " cow pie", " cutie pie"];
+var legendaryPies = [" creampie", " cow pie", " cutie pie"];
 
 var adjectives = ["delicious", "tasty", "scrumptious", "heavenly", "delectable", "delightful", "yummy"]
  
