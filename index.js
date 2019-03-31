@@ -10,7 +10,7 @@ var pieCount;
 var sendText = "Kim wants you to have a slice of her ";
  
 var commonPies = [" pumpkin pie", " coconut cream pie", " banana cream pie", " strawberry rhubarb pie", " chocolate cream pie", " blueberry pie", " ice cream pie",
-    " peach pie", " pear pie", " chicken pot pie", " cranberry pie", " pineapple pie", " turtle pie"
+    "peach pie", " pear pie", " chicken pot pie", " cranberry pie", " pineapple pie", " turtle pie"
 ];
  
 var uncommonPies = [" apple pie", " cherry pie", " key lime pie", " lemon meringue pie", " blackberry pie", " raspberry pie", " pecan pie",
@@ -60,6 +60,8 @@ bot.on('message', function(message) {
           default:
             newPie = commonPies[Math.floor(Math.random() * commonPies.length)];
         }
+
+        newPie = "pecan pie";
  
             pieCount++
 
@@ -70,16 +72,21 @@ bot.on('message', function(message) {
             if(randomNum2 > 95 && message.author.id != "117120898992963591") {
 
                 message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + newPie + ". Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
-                    if(newPie == "prickly pear pie") {
-                        botSentMessage.react("🌵");
+                    
+                    switch(true) {
+                        case (pieCount.toString().includes("49")):
+                            botSentMessage.react("😏");
+                            break;
+                        case (newPie == "prickly pear pie"):
+                            botSentMessage.react("🌵");
+                            break;
+                        case (newPie == "pecan pie" && message.author.id.toString() == "307350352594862080"):
+                            botSentMessage.react("😂");
+                            break;
+                        case (newPie == "pecan pie" && (piePerson.toLowerCase() == "kecatas" || piePerson.toLowerCase() == "kec" || piePerson.toLowerCase() == "cactus")):
+                            botSentMessage.react("😂");
                     }
-                    else if (pieCount.toString().includes("69")) {
-                        botSentMessage.react("😏");
-                    }
-                    else if ((newPie == "pecan pie" && message.author.id.toString() == "307350352594862080") || (newPie == "pecan pie" && (piePerson.toLowerCase() == "kecatas" ||
-                    piePerson.toLowerCase() == "kec" || piePerson.toLowerCase() == "cactus" || piePerson.toLowerCase() == "kacatas"))) {
-                        botSentMessage.react("😂");
-                    }
+                    
                 });
 
             }
@@ -87,16 +94,21 @@ bot.on('message', function(message) {
             else {
 
                 message.channel.send("Here, " + piePerson + "! " + sendText + pieAdj + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
-                    if(newPie == "prickly pear pie") {
-                        botSentMessage.react("🌵");
+
+                    switch(true) {
+                        case (pieCount.toString().includes("69")):
+                            botSentMessage.react("😏");
+                            break;
+                        case (newPie == "prickly pear pie"):
+                            botSentMessage.react("🌵");
+                            break;
+                        case (newPie == "pecan pie" && message.author.id.toString() == "307350352594862080"):
+                            botSentMessage.react("😂");
+                            break;
+                        case (newPie == "pecan pie" && (piePerson.toLowerCase() == "kecatas" || piePerson.toLowerCase() == "kec" || piePerson.toLowerCase() == "cactus")):
+                            botSentMessage.react("😂");
                     }
-                    else if (pieCount.toString().includes("69")) {
-                        botSentMessage.react("😏");
-                    }
-                    else if ((newPie == "pecan pie" && message.author.id.toString() == "307350352594862080") || (newPie == "pecan pie" && (piePerson.toLowerCase() == "kecatas" ||
-                    piePerson.toLowerCase() == "kec" || piePerson.toLowerCase() == "cactus" || piePerson.toLowerCase() == "kacatas"))) {
-                        botSentMessage.react("😂");
-                    }
+                    
                 });
 
             }
