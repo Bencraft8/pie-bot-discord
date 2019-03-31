@@ -60,8 +60,6 @@ bot.on('message', function(message) {
           default:
             newPie = commonPies[Math.floor(Math.random() * commonPies.length)];
         }
-
-        newPie = "pecan pie";
  
             pieCount++
 
