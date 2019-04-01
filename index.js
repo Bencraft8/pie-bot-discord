@@ -97,13 +97,13 @@ bot.on('message', function(message) {
                         case (pieCount.toString().includes("69")):
                             botSentMessage.react("😏");
                             break;
-                        case (newPie == "prickly pear pie"):
+                        case (newPie == " prickly pear pie"):
                             botSentMessage.react("🌵");
                             break;
-                        case (newPie == "pecan pie" && message.author.id.toString() == "307350352594862080"):
+                        case (newPie == " pecan pie" && message.author.id.toString() == "307350352594862080"):
                             botSentMessage.react("😂");
                             break;
-                        case (newPie == "pecan pie" && (piePerson.toLowerCase() == "kecatas" || piePerson.toLowerCase() == "kec" || piePerson.toLowerCase() == "cactus")):
+                        case (newPie == " pecan pie" && (piePerson.toLowerCase() == "kecatas" || piePerson.toLowerCase() == "kec" || piePerson.toLowerCase() == "cactus")):
                             botSentMessage.react("😂");
                     }
                     
