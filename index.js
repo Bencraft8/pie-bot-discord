@@ -61,7 +61,7 @@ bot.on('message', function(message) {
             newPie = commonPies[Math.floor(Math.random() * commonPies.length)];
         }
  
-            pieCount++
+            //pieCount++
 
             pieAdj = adjectives[Math.floor(Math.random() * adjectives.length)];
  
@@ -69,7 +69,7 @@ bot.on('message', function(message) {
 
             if(randomNum2 > 95 && message.author.id != "117120898992963591") {
 
-                message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + newPie + ". Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+                /*message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + newPie + ". Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
                     
                     switch(true) {
                         case (pieCount.toString().includes("49")):
@@ -86,12 +86,14 @@ bot.on('message', function(message) {
                     }
                     
                 });
+                */
+                message.channel.send("🤔")
 
             }
 
             else {
 
-                message.channel.send("Here, " + piePerson + "! " + sendText + pieAdj + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+                /*message.channel.send("Here, " + piePerson + "! " + sendText + pieAdj + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 
                     switch(true) {
                         case (pieCount.toString().includes("69")):
@@ -106,16 +108,22 @@ bot.on('message', function(message) {
                         case (newPie == " pecan pie" && (piePerson.toLowerCase() == "kecatas" || piePerson.toLowerCase() == "kec" || piePerson.toLowerCase() == "cactus")):
                             botSentMessage.react("😂");
                     }
-                    
+
                 });
+                */
+                message.channel.send("🤔")
 
             }
 
         bot.channels.get("560345281577877514").send(pieCount);
 
-	} else if (sentMessage[0].toLowerCase() == "!menu") {
+    } 
+    else if (sentMessage[0].toLowerCase() == "!menu") {
         if(message.channel.id == "459566179615506442" || message.channel.id == "369001523453231105") {
-            message.channel.send(
+            
+            message.channel.send("🤔")
+            
+            /*message.channel.send(
                 "**Common Pies (60%):**" + "\n" +
                 " - " + commonPies + "\n" +
     
@@ -130,11 +138,12 @@ bot.on('message', function(message) {
     
                 "**Total:**" + "\n" +
                 " - " + (commonPies.length + uncommonPies.length + rarePies.length + legendaryPies.length) + " pies"
-            );
+            );*/
+
+
         } else {
             message.channel.send("Sorry, I can only show the menu in #pies_of_exile to prevent spam.")
         }
-        
     }
 });
 
