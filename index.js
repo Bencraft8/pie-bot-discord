@@ -69,7 +69,7 @@ bot.on('message', function(message) {
 
             if(randomNum2 > 95 && message.author.id != "117120898992963591") {
 
-                /*message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + newPie + ". Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+                message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + newPie + ". Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
                     
                     switch(true) {
                         case (pieCount.toString().includes("49")):
@@ -86,14 +86,12 @@ bot.on('message', function(message) {
                     }
                     
                 });
-                */
-                message.channel.send("🤔")
 
             }
 
             else {
 
-                /*message.channel.send("Here, " + piePerson + "! " + sendText + pieAdj + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+                message.channel.send("Here, " + piePerson + "! " + sendText + pieAdj + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
 
                     switch(true) {
                         case (pieCount.toString().includes("69")):
@@ -110,8 +108,6 @@ bot.on('message', function(message) {
                     }
 
                 });
-                */
-                message.channel.send("🤔")
 
             }
 
@@ -121,9 +117,7 @@ bot.on('message', function(message) {
     else if (sentMessage[0].toLowerCase() == "!menu") {
         if(message.channel.id == "459566179615506442" || message.channel.id == "369001523453231105") {
             
-            message.channel.send("🤔")
-            
-            /*message.channel.send(
+            message.channel.send(
                 "**Common Pies (60%):**" + "\n" +
                 " - " + commonPies + "\n" +
     
@@ -138,7 +132,7 @@ bot.on('message', function(message) {
     
                 "**Total:**" + "\n" +
                 " - " + (commonPies.length + uncommonPies.length + rarePies.length + legendaryPies.length) + " pies"
-            );*/
+            );
 
 
         } else {
