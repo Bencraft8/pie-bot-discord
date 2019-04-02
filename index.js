@@ -61,7 +61,7 @@ bot.on('message', function(message) {
             newPie = commonPies[Math.floor(Math.random() * commonPies.length)];
         }
  
-            //pieCount++
+            pieCount++
 
             pieAdj = adjectives[Math.floor(Math.random() * adjectives.length)];
  
