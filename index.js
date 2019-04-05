@@ -72,7 +72,7 @@ bot.on('message', function(message) {
                 message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + newPie + ". Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
                     
                     switch(true) {
-                        case (pieCount.toString().includes("49")):
+                        case (pieCount.toString().includes("69")):
                             botSentMessage.react("😏");
                             break;
                         case (newPie == " prickly pear pie"):
