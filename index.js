@@ -139,6 +139,9 @@ bot.on('message', function(message) {
             message.channel.send("Sorry, I can only show the menu in #pies_of_exile to prevent spam.")
         }
     }
+    else if (sentMessage[0].toLowerCase() == "!cake") {
+        message.channel.send("No.");
+    }
 });
 
 bot.login(process.env.BOT_TOKEN);
