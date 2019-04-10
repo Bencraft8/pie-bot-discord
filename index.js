@@ -10,11 +10,11 @@ var pieCount;
 var sendText = "Kim wants you to have a slice of her ";
  
 var commonPies = [" pumpkin pie", " coconut cream pie", " banana cream pie", " strawberry rhubarb pie", " chocolate cream pie", " blueberry pie", " ice cream pie",
-    " peach pie", " pear pie", " chicken pot pie", " cranberry pie", " pineapple pie", " turtle pie"
+    " peach pie", " pear pie", " chicken pot pie", " cranberry pie", " pineapple pie", " turtle pie", " chocolate hazlenut", " mixed berry"
 ];
  
 var uncommonPies = [" apple pie", " cherry pie", " key lime pie", " lemon meringue pie", " blackberry pie", " raspberry pie", " pecan pie",
-    " strawberry pie", " french silk pie", " custard pie", " chocolate peanut butter pie", " butterscotch pie", " mississippi mud pie", " caramel apple pie", " pizza pie"
+    " strawberry pie", " french silk pie", " custard pie", " chocolate peanut butter pie", " butterscotch pie", " mississippi mud pie", " caramel apple pie", " pizza pie", " cookies and cream"
 ];
  
 var rarePies = [" cheesecake", " prickly pear pie", " peach pie à la mode", " apple pie à la mode", " blackberry pie à la mode", " cherry pie à la mode",
@@ -33,6 +33,9 @@ bot.on('ready', function() {
     });
 });
 
+var commonRarity = 55
+var uncommonRarity = 95
+
 bot.on('message', function(message) {
  
     var sentMessage = message.content.split(" ", 2);
@@ -45,10 +48,10 @@ bot.on('message', function(message) {
         var randomNumAdj = Math.floor(Math.random() * 7) + 1;
  
         switch (true) { 
-          case (randomNum < 60):
+          case (randomNum < commonRarity):
             newPie = commonPies[Math.floor(Math.random() * commonPies.length)];
             break;
-          case (randomNum < 97):
+          case (randomNum < uncommonRarity):
             newPie = uncommonPies[Math.floor(Math.random() * uncommonPies.length)];
             break;
           case (randomNum < 100):
@@ -118,13 +121,13 @@ bot.on('message', function(message) {
         if(message.channel.id == "459566179615506442" || message.channel.id == "369001523453231105") {
             
             message.channel.send(
-                "**Common Pies (60%):**" + "\n" +
+                "**Common Pies (" + commonRarity + "%):**" + "\n" +
                 " - " + commonPies + "\n" +
     
-                "**Uncommon Pies (36%):**" + "\n" +
+                "**Uncommon Pies (" + (uncommonRarity - commonRarity) + "%):**" + "\n" +
                 " - " + uncommonPies + "\n" +
     
-                "**Rare Pies (3%):**" + "\n" +
+                "**Rare Pies (" + (99 - uncommonRarity) + "%):**" + "\n" +
                 " - " + rarePies + "\n" +
     
                 "**Legendary Pies (1%):**" + "\n" +
@@ -141,6 +144,9 @@ bot.on('message', function(message) {
     }
     else if (sentMessage[0].toLowerCase() == "!cake") {
         message.channel.send("No.");
+    }
+    else if (sentMessage[0].toLowerCase() == "!piebot" && message.author.id == "324050712935792643") {
+        message.channel.send("I'm not your search engine, manton!");
     }
 });
 
