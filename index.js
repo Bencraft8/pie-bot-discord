@@ -145,7 +145,7 @@ bot.on('message', function(message) {
     else if (sentMessage[0].toLowerCase() == "!cake") {
         message.channel.send("No.");
     }
-    else if (sentMessage[0].toLowerCase() == "!piebot" && message.author.id == "324050712935792643") {
+    else if (sentMessage[0].toLowerCase().includes("!piebot") && message.author.id == "324050712935792643") {
         message.channel.send("I'm not your search engine, manton!");
     }
 });
