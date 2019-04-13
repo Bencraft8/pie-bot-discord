@@ -19,7 +19,7 @@ var uncommonPies = [" apple pie", " cherry pie", " key lime pie", " lemon mering
 ];
  
 var rarePies = [" cheesecake", " prickly pear pie", " peach pie à la mode", " apple pie à la mode", " blackberry pie à la mode", " cherry pie à la mode",
-    " raspberry pie à la mode", " blueberry pie à la mode"
+    " raspberry pie à la mode", " blueberry pie à la mode", " boysenberry pie à la mode", " mixed berry pie à la mode"
 ];
 
 var legendaryPies = [" creampie", " cow pie", " cutie pie"];
