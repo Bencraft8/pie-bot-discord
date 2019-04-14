@@ -43,7 +43,7 @@ bot.on('message', function(message) {
  
     var piePerson = sentMessage[1] ? sentMessage[1] : message.author;
  
-    if (sentMessage[0].toLowerCase() == "!pie") {
+    if (sentMessage[0].toLowerCase() == "!pie" && message.author.id != "454063301035294724") {
  
         var randomNum = Math.floor(Math.random() * 101);
         var randomNumAdj = Math.floor(Math.random() * 7) + 1;
