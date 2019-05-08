@@ -196,6 +196,7 @@ bot.on('message', function(message) {
         if(message.channel.id == "459566179615506442" || message.channel.id == "369001523453231105") {
             
             message.channel.send(
+                "**Pies**" + "\n" + "\n" +
                 "**Common Pies (" + commonRarity + "%):**" + "\n" +
                 " - " + commonPies + "\n" +
     
@@ -208,9 +209,26 @@ bot.on('message', function(message) {
                 "**Legendary Pies (1%):**" + "\n" +
                 " - " + legendaryPies + "\n" +
     
-                "**Total:**" + "\n" +
+                "**Total Pie Count:**" + "\n" +
                 " - " + (commonPies.length + uncommonPies.length + rarePies.length + legendaryPies.length) + " pies" + "\n" + "\n" +
-                "Sorry, muffins are not currently on the menu. They will be added soon."
+
+                //------------------------------------------
+
+                "**Muffins**" + "\n" + "\n" +
+                "**Common Muffins (" + commonRarity + "%):**" + "\n" +
+                " - " + commonMuffins + "\n" +
+    
+                "**Uncommon Muffins (" + (uncommonRarity - commonRarity) + "%):**" + "\n" +
+                " - " + uncommonMuffins + "\n" +
+    
+                "**Rare Muffins (" + (99 - uncommonRarity) + "%):**" + "\n" +
+                " - " + rareMuffins + "\n" +
+    
+                "**Legendary Muffins (1%):**" + "\n" +
+                " - " + legendaryMuffins + "\n" +
+    
+                "**Total Muffin Count:**" + "\n" +
+                " - " + (commonMuffins.length + uncommonMuffins.length + rareMuffins.length + legendaryMuffins.length) + " muffins"
             );
 
 
