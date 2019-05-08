@@ -24,6 +24,21 @@ var rarePies = [" cheesecake", " prickly pear pie", " peach pie à la mode", " a
 
 var legendaryPies = [" creampie", " cow pie", " cutie pie"];
 
+//-----------------------------------------------------------------------------
+
+var commonMuffins = [" banana muffin", " blueberry muffin", " lemon poppy seed muffin"
+];
+
+var uncommonMuffins = [" chocolate chip muffin", " cornbread muffin", " pumpkin muffin"
+];
+
+var rareMuffins = [" chocolate chunk muffin", " apple cinnamon muffin"
+];
+
+var legendaryMuffins = [' "special" muffin'];
+
+//-----------------------------------------------------------------------------
+
 var adjectives = ["delicious", "tasty", "scrumptious", "heavenly", "delectable", "delightful", "yummy"]
  
 bot.on('ready', function() {
@@ -73,7 +88,7 @@ bot.on('message', function(message) {
 
             if(randomNum2 > 95) {
 
-                message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + newPie + ". Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+                message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + newPie + ". There have been " + pieCount + " desserts given out on Discord.").then(function (botSentMessage){
                     
                     switch(true) {
                         case (pieCount.toString().includes("69")):
@@ -95,7 +110,7 @@ bot.on('message', function(message) {
 
             else {
 
-                message.channel.send("Here, " + piePerson + "! " + sendText + pieAdj + newPie + "! Kim has given out " + pieCount + " pies on Discord.").then(function (botSentMessage){
+                message.channel.send("Here, " + piePerson + "! " + sendText + pieAdj + newPie + "! There have been " + pieCount + " desserts given out on Discord.").then(function (botSentMessage){
 
                     switch(true) {
                         case (pieCount.toString().includes("69")):
@@ -117,7 +132,66 @@ bot.on('message', function(message) {
 
         bot.channels.get("560345281577877514").send(pieCount);
 
-    } 
+    }
+    else if (sentMessage[0].toLowerCase() == "!muffin") {
+        
+        var randomNum = Math.floor(Math.random() * 101);
+        var randomNumAdj = Math.floor(Math.random() * 7) + 1;
+
+        switch (true) { 
+            case (randomNum < commonRarity):
+            newMuffin = commonMuffins[Math.floor(Math.random() * commonMuffins.length)];
+            break;
+            case (randomNum < uncommonRarity):
+            newMuffin = uncommonMuffins[Math.floor(Math.random() * uncommonMuffins.length)];
+            break;
+            case (randomNum < 100):
+            newMuffin = rareMuffins[Math.floor(Math.random() * rareMuffins.length)];
+            break;
+            case (randomNum == 100):
+            newMuffin = legendaryMuffins[Math.floor(Math.random() * legendaryMuffins.length)];
+            break;
+            default:
+            newMuffin = commonMuffins[Math.floor(Math.random() * commonMuffins.length)];
+        }
+
+            pieCount++
+
+            pieAdj = adjectives[Math.floor(Math.random() * adjectives.length)];
+
+            var randomNum2 = Math.floor(Math.random() * 101);
+
+            if(randomNum2 > 95) {
+
+                message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + newMuffin + ". There have been " + pieCount + " desserts given out on Discord.").then(function (botSentMessage){
+                    
+                    switch(true) {
+                        case (pieCount.toString().includes("69")):
+                            botSentMessage.react("😏");
+                            break;
+                    }
+                    
+                });
+
+            }
+
+            else {
+
+                message.channel.send("Here, " + piePerson + "! " + "Kecatas wants you to have a " + pieAdj + newMuffin + "! There have been " + pieCount + " desserts given out on Discord.").then(function (botSentMessage){
+
+                    switch(true) {
+                        case (pieCount.toString().includes("69")):
+                            botSentMessage.react("😏");
+                            break;
+                    }
+
+                });
+
+            }
+
+        bot.channels.get("560345281577877514").send(pieCount);
+
+    }
     else if (sentMessage[0].toLowerCase() == "!menu") {
         if(message.channel.id == "459566179615506442" || message.channel.id == "369001523453231105") {
             
@@ -135,7 +209,8 @@ bot.on('message', function(message) {
                 " - " + legendaryPies + "\n" +
     
                 "**Total:**" + "\n" +
-                " - " + (commonPies.length + uncommonPies.length + rarePies.length + legendaryPies.length) + " pies"
+                " - " + (commonPies.length + uncommonPies.length + rarePies.length + legendaryPies.length) + " pies" + "\n" + "\n" +
+                "Sorry, muffins are not currently on the menu. They will be added soon."
             );
 
 
@@ -144,7 +219,7 @@ bot.on('message', function(message) {
         }
     }
     else if (sentMessage[0].toLowerCase() == "!cake") {
-        message.channel.send("No.");
+        message.channel.send("Maybe later.");
     }
     else if (sentMessage[0].toLowerCase() == "!piebot" && message.author.id != "549418373130223630") {
 
