@@ -256,24 +256,27 @@ bot.on('message', function (message) {
         message.channel.send("Here you go " + message.author + ": " + "http://lmgtfy.com/?q=" + newString);
     }
     else if (sentMessage[0].toLowerCase() == "!ask") {
+        if (sentMessage[1]) {
+            var randomNum = Math.floor(Math.random() * 101);
 
-        var randomNum = Math.floor(Math.random() * 101);
+            switch (true) {
+                case (randomNum < 60):
+                    response = yesOrNoResponses[Math.floor(Math.random() * yesOrNoResponses.length)];
+                    break;
+                case (randomNum < 90):
+                    response = middleResponses[Math.floor(Math.random() * middleResponses.length)];
+                    break;
+                case (randomNum <= 100):
+                    response = oddResponses[Math.floor(Math.random() * oddResponses.length)];
+                    break;
+                default:
+                    response = yesOrNoResponses[Math.floor(Math.random() * yesOrNoResponses.length)];
+            }
 
-        switch (true) {
-            case (randomNum < 60):
-                response = yesOrNoResponses[Math.floor(Math.random() * yesOrNoResponses.length)];
-                break;
-            case (randomNum < 90):
-                response = middleResponses[Math.floor(Math.random() * middleResponses.length)];
-                break;
-            case (randomNum <= 100):
-                response = oddResponses[Math.floor(Math.random() * oddResponses.length)];
-                break;
-            default:
-                response = yesOrNoResponses[Math.floor(Math.random() * yesOrNoResponses.length)];
+            message.channel.send(response);
+        } else {
+            message.channel.send("What?");
         }
-
-        message.channel.send(response);
     }
     else if (sentMessage[0].toLowerCase() == "!help" || sentMessage[0].toLowerCase() == "!commands") {
 
