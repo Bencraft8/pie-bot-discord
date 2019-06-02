@@ -39,10 +39,10 @@ var legendaryMuffins = [" Kecatas' 'special' muffin"];
 
 //-----------------------------------------------------------------------------
 
-var yesOrNoResponses = ["Yep.", "Yes, definitely.", "Without a doubt.", "I believe so.", "As I see it, yes",
-    "Don't count on it.", "I don't think so.", "Not looking very good.", "Nah.", "Doubting it."]
+var yesOrNoResponses = ["Yep.", "Yes, definitely.", "Without a doubt.", "I believe so.", "Mhm.",
+    "I wouldn't count on it.", "I don't think so.", "No way.", "Nah.", "Doubting it."]
 
-var middleResponses = ["Could you repeat that?", "Not now.", "Better not tell you now.", "Can't answer right now.", "One more time?"]
+var middleResponses = ["Could you repeat that?", "I'm not sure...", "Idk", "Can't answer right now.", "One more time?"]
 
 var oddResponses = ["🤔", "I'll let you know later.", /*"Why are you asking me?"*/ "You should know the answer to that already.", "Go bother someone else."]
 
