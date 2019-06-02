@@ -40,7 +40,7 @@ var legendaryMuffins = [' "special" muffin'];
 //-----------------------------------------------------------------------------
 
 var askResponses = ["It is certain.", "Yes - definitely.", "Without a doubt.", "Signs point to yes.", "As I see it, yes",
-    "Reply hazy, try again.", "Ask again later.", "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again.",
+    "Reply hazy, try again.", "Ask again later.", "Better not tell you now.", "Cannot answer now.", "Concentrate and ask again.",
     "Don't count on it.", "My reply is no.", "My sources say no.", "Outlook not so good.", "Very doubtful."]
 
 var adjectives = ["delicious", "tasty", "scrumptious", "heavenly", "delectable", "delightful", "yummy"]
