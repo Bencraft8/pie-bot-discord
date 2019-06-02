@@ -35,13 +35,18 @@ var uncommonMuffins = [" chocolate chip muffin", " cornbread muffin", " pumpkin 
 var rareMuffins = [" chocolate chunk muffin", " apple cinnamon muffin", " snickerdoodle muffin"
 ];
 
-var legendaryMuffins = [' "special" muffin'];
+var legendaryMuffins = [" Kecatas' 'special' muffin"];
 
 //-----------------------------------------------------------------------------
 
-var askResponses = ["It is certain.", "Yes - definitely.", "Without a doubt.", "Signs point to yes.", "As I see it, yes",
-    "Reply hazy, try again.", "Ask again later.", "Better not tell you now.", "Cannot answer now.", "Concentrate and ask again.",
-    "Don't count on it.", "My reply is no.", "My sources say no.", "Outlook not so good.", "Very doubtful."]
+var yesOrNoResponses = ["Yep.", "Yes, definitely.", "Without a doubt.", "I believe so.", "As I see it, yes",
+    "Don't count on it.", "I don't think so.", "Not looking very good.", "Nah.", "Doubting it."]
+
+var middleResponses = ["Could you repeat that?", "Not now.", "Better not tell you now.", "Can't answer right now.", "One more time?"]
+
+var oddResponses = ["🤔", "I'll let you know later.", /*"Why are you asking me?"*/ "You should know the answer to that already.", "Go bother someone else."]
+
+
 
 var adjectives = ["delicious", "tasty", "scrumptious", "heavenly", "delectable", "delightful", "yummy"]
 
@@ -252,7 +257,21 @@ bot.on('message', function (message) {
     }
     else if (sentMessage[0].toLowerCase() == "!ask") {
 
-        response = askResponses[Math.floor(Math.random() * askResponses.length)];
+        var randomNum = Math.floor(Math.random() * 101);
+
+        switch (true) {
+            case (randomNum < 60):
+                response = yesOrNoResponses[Math.floor(Math.random() * yesOrNoResponses.length)];
+                break;
+            case (randomNum < 90):
+                response = middleResponses[Math.floor(Math.random() * middleResponses.length)];
+                break;
+            case (randomNum <= 100):
+                response = oddResponses[Math.floor(Math.random() * oddResponses.length)];
+                break;
+            default:
+                response = yesOrNoResponses[Math.floor(Math.random() * yesOrNoResponses.length)];
+        }
 
         message.channel.send(response);
     }
