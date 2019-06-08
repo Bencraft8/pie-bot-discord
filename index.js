@@ -290,6 +290,26 @@ bot.on('message', function (message) {
             "!ask"
         );
     }
+    else if (sentMessage[0].toLowerCase() == "!senddm" && message.author.id == "189510396569190401" && sentMessage[1]) {
+
+        var newString = "";
+
+        for (i = 2; i < message.content.split(" ").length; i++) {
+            newString += " " + message.content.split(" ")[i];
+        }
+
+        bot.users.get(sentMessage[1]).send(newString);
+
+    }
+    else if (sentMessage[0].toLowerCase() == "ok" && !sentMessage[1] && !sentMessage[2] && message.author.id != "549418373130223630") {
+
+        okChance = Math.floor(Math.random() * 10) + 1;
+
+        if (okChance == 3) {
+            message.channel.send("ok")
+        }
+
+    }
 
 });
 
