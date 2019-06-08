@@ -305,7 +305,7 @@ bot.on('message', function (message) {
 
         okChance = Math.floor(Math.random() * 10) + 1;
 
-        if (okChance == 3) {
+        if (okChance < 3) {
             message.channel.send("ok")
         }
 
