@@ -7,6 +7,8 @@ require('events').EventEmitter.defaultMaxListeners = 20;
 
 var pieCount;
 
+var sendOk;
+
 var sendText = "Kim wants you to have a slice of her ";
 
 var commonPies = [" pumpkin pie", " coconut cream pie", " banana cream pie", " strawberry rhubarb pie", " chocolate cream pie", " blueberry pie", " ice cream pie",
@@ -302,12 +304,22 @@ bot.on('message', function (message) {
 
     }
     else if (sentMessage[0].toLowerCase() == "ok" && !sentMessage[1] && !sentMessage[2] && message.author.id != "549418373130223630") {
+        message.channel.fetchMessages({ limit: 5 }).then(messagesss => {
+            var authorIDs = ["test"];
 
-        okChance = Math.floor(Math.random() * 10) + 1;
+            for (i = 0; i < messagesss.array().length; i++) {
+                authorIDs.push(messagesss.array()[i].author.id);
+            }
 
-        if (okChance < 3) {
-            message.channel.send("ok")
-        }
+            var botID = authorIDs.find(function (element) {
+                return element == "549418373130223630"
+            });
+
+            if (!botID) {
+                message.channel.send("ok");
+            }
+
+        });
 
     }
 
