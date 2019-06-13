@@ -300,7 +300,7 @@ bot.on('message', function (message) {
             newString += " " + message.content.split(" ")[i];
         }
 
-        message.channel.send("Sent '" + newString + "' to user: " + bot.users.get(sentMessage[1]).name);
+        message.channel.send("Sent '" + newString + "' to user: " + bot.users.get(sentMessage[1]).tag);
         bot.users.get(sentMessage[1]).send(newString);
 
     }
