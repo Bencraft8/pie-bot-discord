@@ -300,7 +300,22 @@ bot.on('message', function (message) {
             newString += " " + message.content.split(" ")[i];
         }
 
+        message.channel.send("Sent '" + newString + "' to user: " + bot.users.get(sentMessage[1]).name);
         bot.users.get(sentMessage[1]).send(newString);
+
+    }
+    else if (sentMessage[0].toLowerCase() == "!sendmsg" && message.author.id == "189510396569190401" && sentMessage[1]) {
+
+        var sendChannel = sentMessage[1];
+
+        var newString = "";
+
+        for (i = 2; i < message.content.split(" ").length; i++) {
+            newString += " " + message.content.split(" ")[i];
+        }
+
+        message.channel.send("Sent '" + newString + "' to channel: " + bot.channels.get(sendChannel).name);
+        bot.channels.get(sendChannel).send(newString);
 
     }
     else if (sentMessage[0].toLowerCase() == "ok" && !sentMessage[1] && !sentMessage[2] && message.author.id != "549418373130223630") {
