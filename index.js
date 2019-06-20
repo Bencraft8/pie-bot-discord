@@ -65,7 +65,7 @@ var uncommonRarity = 95
 
 bot.on('message', function (message) {
 
-    var sentMessage = message.content.split(" ", 2);
+    var sentMessage = message.content.split(" ");
 
     var piePerson = sentMessage[1] ? sentMessage[1] : message.author;
 
@@ -316,6 +316,27 @@ bot.on('message', function (message) {
 
         message.channel.send("Sent '" + newString + "' to channel: " + bot.channels.get(sendChannel).name);
         bot.channels.get(sendChannel).send(newString);
+
+    }
+    else if (sentMessage[0].toLowerCase() == "!reactmsg" && message.author.id == "189510396569190401" && sentMessage[1]) {
+
+        bot.channels.get(sentMessage[1]).fetchMessage(sentMessage[2]).then(function (msg) {
+            msg.react(sentMessage[3]);
+            message.channel.send("Reacted " + sentMessage[3] + " to the following message: \n" +
+                msg.author.tag + ": " + msg.content);
+        });
+
+    }
+    else if (sentMessage[0].toLowerCase() == "!admintools" && message.author.id == "189510396569190401") {
+
+        message.channel.send(
+            "**Admin Commands**" + "\n" + "\n" +
+
+            "!senddm (userID) (message to send)" + "\n" +
+            "!sendmsg (channelID) (message to send)" + "\n" +
+            "!reactmsg (channelID) (messageID) (emoji)" + "\n" +
+            "!admintools"
+        );
 
     }
     else if (sentMessage[0].toLowerCase() == "ok" && !sentMessage[1] && !sentMessage[2] && message.author.id != "549418373130223630") {
