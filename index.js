@@ -44,10 +44,9 @@ var legendaryMuffins = [" Kecatas' 'special' muffin"];
 var yesOrNoResponses = ["Yep.", "Yes, definitely.", "Without a doubt.", "I believe so.", "Mhm.",
     "I wouldn't count on it.", "I don't think so.", "No way.", "Nah.", "Doubting it."]
 
-var middleResponses = ["Could you repeat that?", "I'm not sure...", "Idk", "Can't answer right now.", "One more time?"]
+var middleResponses = ["Could you repeat that?", "I'm not sure...", "Idk", "Can't answer right now.", "One more time?", "🤔"]
 
-var oddResponses = ["🤔", "I'll let you know later.", /*"Why are you asking me?"*/ "You should know the answer to that already.", "Go bother someone else."]
-
+var oddResponses = ["I'll let you know later.", /*"Why are you asking me?"*/ "You should know the answer to that already.", "Go bother someone else."]
 
 
 var adjectives = ["delicious", "tasty", "scrumptious", "heavenly", "delectable", "delightful", "yummy"]
@@ -262,10 +261,10 @@ bot.on('message', function (message) {
             var randomNum = Math.floor(Math.random() * 101);
 
             switch (true) {
-                case (randomNum < 60):
+                case (randomNum < 50):
                     response = yesOrNoResponses[Math.floor(Math.random() * yesOrNoResponses.length)];
                     break;
-                case (randomNum < 90):
+                case (randomNum < 80):
                     response = middleResponses[Math.floor(Math.random() * middleResponses.length)];
                     break;
                 case (randomNum <= 100):
