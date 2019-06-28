@@ -242,7 +242,7 @@ bot.on('message', function (message) {
 
 
         } else {
-            message.channel.send("Sorry, I can only show the menu in #pies_of_exile to prevent spam.")
+            message.channel.send("Sorry, I can only show the menu in #pies_of_exile or #cactus_muffin_gaming to prevent spam.")
         }
     }
     else if (sentMessage[0].toLowerCase() == "!piebot" && message.author.id != "549418373130223630") {
