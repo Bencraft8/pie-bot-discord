@@ -7,8 +7,6 @@ require('events').EventEmitter.defaultMaxListeners = 20;
 
 var pieCount;
 
-var sendOk;
-
 var sendText = "Kim wants you to have a slice of her ";
 
 var commonPies = [" pumpkin pie", " coconut cream pie", " banana cream pie", " strawberry rhubarb pie", " chocolate cream pie", " blueberry pie", " ice cream pie",
@@ -28,7 +26,7 @@ var legendaryPies = [" creampie", " cow pie", " cutie pie"];
 
 //-----------------------------------------------------------------------------
 
-var commonMuffins = [" banana nut muffin", " blueberry muffin", " lemon poppy seed muffin", " coconut muffin", " oatmeal muffin"
+var commonMuffins = [" banana nut muffin", " blueberry muffin", " lemon poppy seed muffin", " coconut muffin", " oatmeal muffin", " raspberry muffin"
 ];
 
 var uncommonMuffins = [" chocolate chip muffin", " cornbread muffin", " pumpkin muffin", " coffee cake muffin", " zucchini muffin", " maple walnut muffin", " pecan muffin"
@@ -47,6 +45,7 @@ var yesOrNoResponses = ["Yep.", "Yes, definitely.", "Without a doubt.", "I belie
 var middleResponses = ["Could you repeat that?", "I'm not sure...", "Idk", "Can't answer right now.", "One more time?", "🤔"]
 
 var oddResponses = ["I'll let you know later.", /*"Why are you asking me?"*/ "You should know the answer to that already.", "Go bother someone else."]
+
 
 
 var adjectives = ["delicious", "tasty", "scrumptious", "heavenly", "delectable", "delightful", "yummy"]
@@ -203,7 +202,7 @@ bot.on('message', function (message) {
 
     }
     else if (sentMessage[0].toLowerCase() == "!menu") {
-        if (message.channel.id == "459566179615506442" || message.channel.id == "369001523453231105") {
+        if (message.channel.id == "459566179615506442" || message.channel.id == "369001523453231105" || message.channel.id == "592904409500090378") {
 
             message.channel.send(
                 "**Pies**" + "\n" + "\n" +
