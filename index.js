@@ -356,6 +356,22 @@ bot.on('message', function (message) {
         });
 
     }
+    else if (sentMessage[0].toLowerCase() == "!scale" && sentMessage[1] && sentMessage[2]) {
+        message.channel.fetchMessages({ limit: 5 }).then(messagesss => {
+
+            if (sentMessage[3]) {
+                var scale = sentMessage[1];
+
+                var num = Math.floor(Math.random() * scale);
+
+                message.channel.send("On a scale of 1 to " + scale + "... I'd say " + num + ".");
+            } else {
+                message.channel.send("What am I scaling?");
+            }
+
+        });
+
+    }
 
 });
 
