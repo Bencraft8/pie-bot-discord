@@ -44,7 +44,7 @@ var yesOrNoResponses = ["Yep.", "Yes, definitely.", "Without a doubt.", "I belie
 
 var middleResponses = ["Could you repeat that?", "I'm not sure...", "Idk", "Can't answer right now.", "One more time?", "🤔"]
 
-var oddResponses = ["I'll let you know later.", /*"Why are you asking me?"*/ "You should know the answer to that already.", "Go bother someone else."]
+var oddResponses = ["I'll let you know later.", /*"Why are you asking me?"*/ "You know the answer to that already.", "Go bother someone else."]
 
 
 
