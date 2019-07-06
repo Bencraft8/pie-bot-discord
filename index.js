@@ -358,15 +358,19 @@ bot.on('message', function (message) {
     }
     else if (sentMessage[0].toLowerCase() == "!scale" && sentMessage[1] && sentMessage[2]) {
         message.channel.fetchMessages({ limit: 5 }).then(messagesss => {
+            if (Number.isInteger(parseInt(sentMessage[1], 10))) {
+                if (sentMessage[2]) {
+                    var scale = sentMessage[1];
 
-            if (sentMessage[3]) {
-                var scale = sentMessage[1];
+                    var num = Math.floor(Math.random() * scale);
 
-                var num = Math.floor(Math.random() * scale);
-
-                message.channel.send("On a scale of 1 to " + scale + "... I'd say " + num + ".");
-            } else {
-                message.channel.send("What am I scaling?");
+                    message.channel.send("On a scale of 1 to " + scale + "... I'd say " + num + ".");
+                } else {
+                    message.channel.send("What am I scaling?");
+                }
+            }
+            else if (!Number.isInteger(sentMessage[1])) {
+                message.channel.send("Please follow !scale with a whole number.")
             }
 
         });
