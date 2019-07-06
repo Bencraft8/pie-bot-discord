@@ -260,10 +260,10 @@ bot.on('message', function (message) {
             var randomNum = Math.floor(Math.random() * 101);
 
             switch (true) {
-                case (randomNum < 50):
+                case (randomNum < 60):
                     response = yesOrNoResponses[Math.floor(Math.random() * yesOrNoResponses.length)];
                     break;
-                case (randomNum < 80):
+                case (randomNum < 90):
                     response = middleResponses[Math.floor(Math.random() * middleResponses.length)];
                     break;
                 case (randomNum <= 100):
