@@ -287,7 +287,8 @@ bot.on('message', function (message) {
             "!pie" + "\n" +
             "!muffin" + "\n" +
             "!menu" + "\n" +
-            "!ask"
+            "!ask" + "\n" +
+            "!scale (max) (question)"
         );
     }
     else if (sentMessage[0].toLowerCase() == "!senddm" && message.author.id == "189510396569190401" && sentMessage[1]) {
