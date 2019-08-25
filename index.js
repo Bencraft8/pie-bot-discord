@@ -43,7 +43,7 @@ var middleResponses = ["Could you repeat that?", "I'm not sure...", "Idk", "Can'
 var oddResponses = ["I'll let you know later.", /*"Why are you asking me?"*/ "You know the answer to that already.", "Go bother someone else."]
 
 const fs = require("fs");
-bot.msgs = require("./json/msgs.json");
+bot.msgs = require("./msgs.json");
 
 var adjectives = ["delicious", "tasty", "scrumptious", "heavenly", "delectable", "delightful", "yummy"]
 
@@ -135,7 +135,7 @@ bot.on('message', function (message) {
             piecount: pieCount,
             muffincount: muffinCount
         }
-        fs.writeFile("./json/msgs.json", JSON.stringify(bot.msgs, null, 4), err => {
+        fs.writeFile("./msgs.json", JSON.stringify(bot.msgs, null, 4), err => {
             if (err) throw err;
         });
 
@@ -203,7 +203,7 @@ bot.on('message', function (message) {
             piecount: pieCount,
             muffincount: muffinCount
         }
-        fs.writeFile("./json/msgs.json", JSON.stringify(bot.msgs, null, 4), err => {
+        fs.writeFile("./msgs.json", JSON.stringify(bot.msgs, null, 4), err => {
             if (err) throw err;
         });
 
