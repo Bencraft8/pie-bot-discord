@@ -1,9 +1,5 @@
-const Commando = require('discord.js-commando');
-const bot = new Commando.Client({
-    unknownCommandResponse: false
-});
-
-require('events').EventEmitter.defaultMaxListeners = 20;
+const discord = require('discord.js');
+const bot = new discord.Client();
 
 var pieCount;
 
@@ -46,17 +42,10 @@ var middleResponses = ["Could you repeat that?", "I'm not sure...", "Idk", "Can'
 
 var oddResponses = ["I'll let you know later.", /*"Why are you asking me?"*/ "You know the answer to that already.", "Go bother someone else."]
 
-
+const fs = require("fs");
+bot.msgs = require("./json/msgs.json");
 
 var adjectives = ["delicious", "tasty", "scrumptious", "heavenly", "delectable", "delightful", "yummy"]
-
-bot.on('ready', function () {
-    console.log("Ready!");
-    bot.channels.get("560345281577877514").fetchMessages({ limit: 1 }).then(messages => {
-        var lastPieCount = messages.first();
-        pieCount = lastPieCount.content;
-    });
-});
 
 var commonRarity = 55
 var uncommonRarity = 95
@@ -68,6 +57,9 @@ bot.on('message', function (message) {
     var piePerson = sentMessage[1] ? sentMessage[1] : message.author;
 
     if (sentMessage[0].toLowerCase() == "!pie") {
+
+        pieCount = bot.msgs[message.guild.id].piecount;
+        muffinCount = bot.msgs[message.guild.id].muffincount;
 
         var randomNum = Math.floor(Math.random() * 101);
         var randomNumAdj = Math.floor(Math.random() * 7) + 1;
@@ -89,7 +81,7 @@ bot.on('message', function (message) {
                 newPie = commonPies[Math.floor(Math.random() * commonPies.length)];
         }
 
-        pieCount++
+        pieCount++;
 
         pieAdj = adjectives[Math.floor(Math.random() * adjectives.length)];
 
@@ -139,10 +131,19 @@ bot.on('message', function (message) {
 
         }
 
-        bot.channels.get("560345281577877514").send(pieCount);
+        bot.msgs[message.guild.id] = {
+            piecount: pieCount,
+            muffincount: muffinCount
+        }
+        fs.writeFile("./json/msgs.json", JSON.stringify(bot.msgs, null, 4), err => {
+            if (err) throw err;
+        });
 
     }
     else if (sentMessage[0].toLowerCase() == "!muffin") {
+
+        pieCount = bot.msgs[message.guild.id].piecount;
+        muffinCount = bot.msgs[message.guild.id].muffincount;
 
         var randomNum = Math.floor(Math.random() * 101);
         var randomNumAdj = Math.floor(Math.random() * 7) + 1;
@@ -164,7 +165,7 @@ bot.on('message', function (message) {
                 newMuffin = commonMuffins[Math.floor(Math.random() * commonMuffins.length)];
         }
 
-        pieCount++
+        muffinCount++;
 
         pieAdj = adjectives[Math.floor(Math.random() * adjectives.length)];
 
@@ -172,7 +173,7 @@ bot.on('message', function (message) {
 
         if (randomNum2 > 95) {
 
-            message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + newMuffin + ". There have been " + pieCount + " desserts given out on Discord.").then(function (botSentMessage) {
+            message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + newMuffin + ". There have been " + muffinCount + " muffins given out on Discord.").then(function (botSentMessage) {
 
                 switch (true) {
                     case (pieCount.toString().includes("69")):
@@ -186,7 +187,7 @@ bot.on('message', function (message) {
 
         else {
 
-            message.channel.send("Here, " + piePerson + "! " + "Kecatas wants you to have a " + pieAdj + newMuffin + "! There have been " + pieCount + " desserts given out on Discord.").then(function (botSentMessage) {
+            message.channel.send("Here, " + piePerson + "! " + "Kecatas wants you to have a " + pieAdj + newMuffin + "! There have been " + muffinCount + " muffins given out on Discord.").then(function (botSentMessage) {
 
                 switch (true) {
                     case (pieCount.toString().includes("69")):
@@ -198,7 +199,13 @@ bot.on('message', function (message) {
 
         }
 
-        bot.channels.get("560345281577877514").send(pieCount);
+        bot.msgs[message.guild.id] = {
+            piecount: pieCount,
+            muffincount: muffinCount
+        }
+        fs.writeFile("./json/msgs.json", JSON.stringify(bot.msgs, null, 4), err => {
+            if (err) throw err;
+        });
 
     }
     else if (sentMessage[0].toLowerCase() == "!menu") {
@@ -377,7 +384,15 @@ bot.on('message', function (message) {
         });
 
     }
+    else if (sentMessage[0] == "👀") {
+        message.react("👀");
+    }
 
+});
+
+bot.on('ready', function () {
+    console.log("Ready!");
+    //pieCount = bot.msgs["Count"].piecount;
 });
 
 bot.login(process.env.BOT_TOKEN);
