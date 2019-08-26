@@ -89,7 +89,7 @@ bot.on('message', function (message) {
 
         if (randomNum2 > 95) {
 
-            message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + newPie + ". There have been " + pieCount + " desserts given out on this server.").then(function (botSentMessage) {
+            message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + newPie + ". There have been " + pieCount + " pies given out on this server.").then(function (botSentMessage) {
 
                 switch (true) {
                     case (pieCount.toString().includes("69")):
@@ -111,7 +111,7 @@ bot.on('message', function (message) {
 
         else {
 
-            message.channel.send("Here, " + piePerson + "! " + sendText + pieAdj + newPie + "! There have been " + pieCount + " desserts given out on this server.").then(function (botSentMessage) {
+            message.channel.send("Here, " + piePerson + "! " + sendText + pieAdj + newPie + "! There have been " + pieCount + " pies given out on this server.").then(function (botSentMessage) {
 
                 switch (true) {
                     case (pieCount.toString().includes("69")):
