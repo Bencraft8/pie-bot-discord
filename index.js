@@ -139,7 +139,7 @@ bot.on('message', function (message) {
 
         }
 
-        bot.channels.get("560345281577877514").send(pieCount);
+        bot.channels.get("650446608256729130").send(pieCount);
 
     }
     else if (sentMessage[0].toLowerCase() == "!muffin") {
@@ -198,7 +198,7 @@ bot.on('message', function (message) {
 
         }
 
-        bot.channels.get("560345281577877514").send(pieCount);
+        bot.channels.get("650446608256729130").send(pieCount);
 
     }
     else if (sentMessage[0].toLowerCase() == "!menu") {
