@@ -52,7 +52,7 @@ var adjectives = ["delicious", "tasty", "scrumptious", "heavenly", "delectable",
 
 bot.on('ready', function () {
     console.log("Ready!");
-    bot.channels.get("560345281577877514").fetchMessages({ limit: 1 }).then(messages => {
+    bot.channels.get("650446608256729130").fetchMessages({ limit: 1 }).then(messages => {
         var lastPieCount = messages.first();
         pieCount = lastPieCount.content;
     });
