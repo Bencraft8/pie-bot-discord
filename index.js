@@ -39,12 +39,17 @@ var legendaryMuffins = [" Kecatas' 'special' muffin"];
 
 //-----------------------------------------------------------------------------
 
+var potatoes = ["some mashed potatoes", "some french fries", "a baked potato", "some hash browns", "some tater tots", "some potato chips",
+    "some loaded potato skins", "some potato pancakes", "some potato gnocci", "some potato salad", "some potato bread"];
+
+//-----------------------------------------------------------------------------
+
 var yesOrNoResponses = ["Yep.", "Yes, definitely.", "Without a doubt.", "I believe so.", "Mhm.",
     "I wouldn't count on it.", "I don't think so.", "No way.", "Nah.", "Doubting it."]
 
 var middleResponses = ["Could you repeat that?", "I'm not sure...", "Idk", "Can't answer right now.", "One more time?", "🤔"]
 
-var oddResponses = ["I'll let you know later.", /*"Why are you asking me?"*/ "You know the answer to that already.", "Go bother someone else."]
+var oddResponses = ["I'll let you know later.", /*"Why are you asking me?",*/ "You know the answer to that already.", "Go bother someone else."]
 
 
 
@@ -201,6 +206,11 @@ bot.on('message', function (message) {
         bot.channels.get("650446608256729130").send(pieCount);
 
     }
+    else if (sentMessage[0].toLowerCase() == "!potato") {
+        var piePerson = sentMessage[1] ? sentMessage[1] : message.author;
+        potato = potatoes[Math.floor(Math.random() * potatoes.length)];
+        message.channel.send("Here, " + piePerson + "! Nurd wants you to have " + potato + ", straight from Idaho! 🥔");
+    }
     else if (sentMessage[0].toLowerCase() == "!menu") {
         if (message.channel.id == "459566179615506442" || message.channel.id == "369001523453231105" || message.channel.id == "592904409500090378") {
 
@@ -286,6 +296,7 @@ bot.on('message', function (message) {
             "!help / !commands" + "\n" +
             "!pie" + "\n" +
             "!muffin" + "\n" +
+            "!potato" + "\n" +
             "!menu" + "\n" +
             "!ask" + "\n" +
             "!scale (max) (question)"
