@@ -209,7 +209,7 @@ bot.on('message', function (message) {
     else if (sentMessage[0].toLowerCase() == "!potato") {
         var piePerson = sentMessage[1] ? sentMessage[1] : message.author;
         potato = potatoes[Math.floor(Math.random() * potatoes.length)];
-        message.channel.send("Here, " + piePerson + "! Nurd wants you to have " + potato + ", straight from Idaho! 🥔");
+        message.channel.send("Here, " + piePerson + "! Nurd wants you to have" + potato + ", straight from Idaho! 🥔");
     }
     else if (sentMessage[0].toLowerCase() == "!menu") {
         if (message.channel.id == "459566179615506442" || message.channel.id == "369001523453231105" || message.channel.id == "592904409500090378" || message.channel.id == "562136578265317388") {
