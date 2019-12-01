@@ -39,8 +39,8 @@ var legendaryMuffins = [" Kecatas' 'special' muffin"];
 
 //-----------------------------------------------------------------------------
 
-var potatoes = ["some mashed potatoes", "some french fries", "a baked potato", "some hash browns", "some tater tots", "some potato chips",
-    "some loaded potato skins", "some potato pancakes", "some potato gnocci", "some potato salad", "some potato bread", "some pocket potatoes"];
+var potatoes = [" some mashed potatoes", " some french fries", " a baked potato", " some hash browns", " some tater tots", " some potato chips",
+    " some loaded potato skins", " some potato pancakes", " some potato gnocci", " some potato salad", " some potato bread", " some pocket potatoes"];
 
 //-----------------------------------------------------------------------------
 
@@ -212,7 +212,7 @@ bot.on('message', function (message) {
         message.channel.send("Here, " + piePerson + "! Nurd wants you to have " + potato + ", straight from Idaho! 🥔");
     }
     else if (sentMessage[0].toLowerCase() == "!menu") {
-        if (message.channel.id == "459566179615506442" || message.channel.id == "369001523453231105" || message.channel.id == "592904409500090378") {
+        if (message.channel.id == "459566179615506442" || message.channel.id == "369001523453231105" || message.channel.id == "592904409500090378" || message.channel.id == "562136578265317388") {
 
             message.channel.send(
                 "**Pies**" + "\n" + "\n" +
@@ -247,7 +247,14 @@ bot.on('message', function (message) {
                 " - " + legendaryMuffins + "\n" +
 
                 "**Total Muffin Count:**" + "\n" +
-                " - " + (commonMuffins.length + uncommonMuffins.length + rareMuffins.length + legendaryMuffins.length) + " muffins"
+                " - " + (commonMuffins.length + uncommonMuffins.length + rareMuffins.length + legendaryMuffins.length) + " muffins" + "\n" + "\n" +
+
+                //--------------
+
+                "**Potatoes**" + "\n" + "\n" +
+                " - " + potatoes + "\n" + "\n" +
+                "**Total Potato Count:**" + "\n" +
+                " - " + potatoes.length
             );
 
 
