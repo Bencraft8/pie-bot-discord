@@ -356,7 +356,7 @@ bot.on('message', function (message) {
         );
 
     }
-    else if ((sentMessage[0].toLowerCase() == "ok" || sentMessage[0] == "<:traumzOk:651455356622602246>") && !sentMessage[1] && !sentMessage[2] && message.author.id != "549418373130223630") {
+    else if ((sentMessage[0].toLowerCase() == "ok" || sentMessage[0] == "<:traumzOk:651455356622602246>" || sentMessage[0] == "traumzOk") && !sentMessage[1] && !sentMessage[2] && message.author.id != "549418373130223630") {
         
         var random = Math.floor(Math.random() * (17 - 4)) + 4;
         
