@@ -372,11 +372,9 @@ bot.on('message', function (message) {
             });
 
             if (!botID) {
-                if(random > 6) {
-                    message.channel.send("ok");
-                } else {
-                    message.channel.send(<:traumzOk:651455356622602246>);
-                }
+                
+                message.channel.send("ok");
+                
             }
 
         });
