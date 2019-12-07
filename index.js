@@ -356,8 +356,11 @@ bot.on('message', function (message) {
         );
 
     }
-    else if (sentMessage[0].toLowerCase() == "ok" && !sentMessage[1] && !sentMessage[2] && message.author.id != "549418373130223630") {
-        message.channel.fetchMessages({ limit: 5 }).then(messagesss => {
+    else if ((sentMessage[0].toLowerCase() == "ok" || sentMessage[0].toLowerCase() == ":traumzOK:" || sentMessage[0].toLowerCase() == "traumzOK") && !sentMessage[1] && !sentMessage[2] && message.author.id != "549418373130223630") {
+        
+        var random = Math.floor(Math.random() * (17 - 4)) + 4;
+        
+        message.channel.fetchMessages({ limit: random }).then(messagesss => {
             var authorIDs = ["test"];
 
             for (i = 0; i < messagesss.array().length; i++) {
