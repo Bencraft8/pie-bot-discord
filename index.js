@@ -324,7 +324,8 @@ bot.on('message', function (message) {
             "!potato" + "\n" +
             "!menu" + "\n" +
             "!ask" + "\n" +
-            "!scale (max) (question)"
+            "!scale (max) (question)" + "\n" +
+            "tts (msg for text-to-speech; for mobile users)"
         );
     }
     else if (sentMessage[0].toLowerCase() == "!senddm" && message.author.id == "189510396569190401" && sentMessage[1]) {
