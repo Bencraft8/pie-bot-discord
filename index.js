@@ -147,6 +147,19 @@ bot.on('message', function (message) {
         bot.channels.get("650446608256729130").send(pieCount);
 
     }
+    else if (sentMessage[0].toLowerCase() == "tts") {
+        
+        var newString = "";
+
+        for (i = 1; i < message.content.split(" ").length; i++) {
+            newString += " " + message.content.split(" ")[i];
+        }
+
+        //message.channel.send("Sent '" + newString + "' to channel: " + bot.channels.get(sendChannel).name);
+        
+        message.channel.send(newString, { tts: true });
+    }
+    
     else if (sentMessage[0].toLowerCase() == "!muffin") {
 
         var randomNum = Math.floor(Math.random() * 101);
