@@ -163,7 +163,6 @@ bot.on('message', function (message) {
     else if (message.channel.id == "562136578265317388") {
         
         bot.channels.get("687896463652683777").send(sentMessage, { tts: true });
-        message.delete();
     }
     
     else if (sentMessage[0].toLowerCase() == "!muffin") {
