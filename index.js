@@ -160,9 +160,9 @@ bot.on('message', function (message) {
         message.channel.send(newString, { tts: true });
     }
     
-    else if (message.channel.id == "562136578265317388") {
+    else if (message.channel.id == "687871515185774612") {
         
-        bot.channels.get("687896463652683777").send(sentMessage, { tts: true });
+        bot.channels.get("687894927291580590").send(sentMessage, { tts: true });
     }
     
     else if (sentMessage[0].toLowerCase() == "!muffin") {
