@@ -163,7 +163,7 @@ bot.on('message', function (message) {
     else if (message.channel.id == "687871515185774612" && message.author.id != "549418373130223630") {
         var newString = "";
 
-        for (i = 1; i < message.content.split(" ").length; i++) {
+        for (i = 0; i < message.content.split(" ").length; i++) {
             newString += " " + message.content.split(" ")[i];
         }
 
@@ -174,7 +174,7 @@ bot.on('message', function (message) {
     else if (message.channel.id == "689280164072652855" && message.author.id != "549418373130223630") {
         var newString = "";
 
-        for (i = 1; i < message.content.split(" ").length; i++) {
+        for (i = 0; i < message.content.split(" ").length; i++) {
             newString += " " + message.content.split(" ")[i];
         }
 
