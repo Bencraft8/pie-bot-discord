@@ -162,31 +162,54 @@ bot.on('message', function (message) {
         
         message.channel.send(newString, { tts: true });
     }
-    
-    else if (message.channel.id == "687871515185774612" && message.author.id != "549418373130223630") {
+    //channels
+    //cow:    689289906966757406
+    //nurd:   689289950109106220
+    //q:      689289981235167245
+    //bacon:  689290003473367041
+    else if (message.channel.id == "689289906966757406" && message.author.id != "549418373130223630") { //in COWs channel
         var newString = "";
 
         for (i = 0; i < message.content.split(" ").length; i++) {
             newString += " " + message.content.split(" ")[i];
         }
 
-        //message.channel.send("Sent '" + newString + "' to channel: " + bot.channels.get(sendChannel).name);
-        
-        message.delete();
-        //689280164072652855
-        bot.channels.get("687871515185774612").send(newString, { tts: true });
+        bot.channels.get("689289950109106220").send(newString, { tts: true });
+        bot.channels.get("689289981235167245").send(newString, { tts: true });
+        bot.channels.get("689290003473367041").send(newString, { tts: true });
     }
-    /*else if (message.channel.id == "689280164072652855" && message.author.id != "549418373130223630") {
+    else if (message.channel.id == "689289950109106220" && message.author.id != "549418373130223630") {//in NURDs channel
+        var newString = "";
+
+        for (i = 0; i < message.content.split(" ").length; i++) {
+            newString += " " + message.content.split(" ")[i];
+        }
+        
+        bot.channels.get("689289906966757406").send(newString, { tts: true });
+        bot.channels.get("689289981235167245").send(newString, { tts: true });
+        bot.channels.get("689290003473367041").send(newString, { tts: true });
+    }
+    else if (message.channel.id == "689289981235167245" && message.author.id != "549418373130223630") {//in Qs channel
+        var newString = "";
+
+        for (i = 0; i < message.content.split(" ").length; i++) {
+            newString += " " + message.content.split(" ")[i];
+        }
+        
+        bot.channels.get("689289906966757406").send(newString, { tts: true });
+        bot.channels.get("689289950109106220").send(newString, { tts: true });
+        bot.channels.get("689290003473367041").send(newString, { tts: true });
+    }else if (message.channel.id == "689290003473367041" && message.author.id != "549418373130223630") {//in BACONs channel
         var newString = "";
 
         for (i = 0; i < message.content.split(" ").length; i++) {
             newString += " " + message.content.split(" ")[i];
         }
 
-        //message.channel.send("Sent '" + newString + "' to channel: " + bot.channels.get(sendChannel).name);
-        
-        bot.channels.get("687871515185774612").send(newString, { tts: true });
-    }*/
+        bot.channels.get("689289906966757406").send(newString, { tts: true });
+        bot.channels.get("689289950109106220").send(newString, { tts: true });
+        bot.channels.get("689289981235167245").send(newString, { tts: true });
+    }
     
     else if (sentMessage[0].toLowerCase() == "!muffin") {
 
