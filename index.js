@@ -160,9 +160,12 @@ bot.on('message', function (message) {
         message.channel.send(newString, { tts: true });
     }
     
-    else if (message.channel.id == "687871515185774612") {
+    else if (message.channel.id == "687871515185774612" && message.author.id != "549418373130223630") {
         
-        bot.channels.get("687894927291580590").send(sentMessage, { tts: true });
+        bot.channels.get("689280164072652855").send(sentMessage, { tts: true });
+    }
+    else if (message.channel.id == "689280164072652855" && message.author.id != "549418373130223630") {
+        bot.channels.get("687871515185774612").send(sentMessage, { tts: true });
     }
     
     else if (sentMessage[0].toLowerCase() == "!muffin") {
@@ -230,7 +233,7 @@ bot.on('message', function (message) {
         message.channel.send("Here, " + piePerson + "! Nurd wants you to have" + potato + ", straight from Idaho! 🥔");
     }
     else if (sentMessage[0].toLowerCase() == "!menu") {
-        if (message.channel.id == "459566179615506442" || message.channel.id == "369001523453231105" || message.channel.id == "592904409500090378" || message.channel.id == "562136578265317388") {
+        if (message.channel.id == "459566179615506442" || message.channel.id == "369001523453231105" || message.channel.id == "592904409500090378" || message.channel.id == "562136578265317388" || message.channel.id == "687904591525838850") {
 
             message.channel.send(
                 "**Pies**" + "\n" + "\n" +
