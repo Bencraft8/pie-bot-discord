@@ -147,6 +147,9 @@ bot.on('message', function (message) {
         bot.channels.get("650446608256729130").send(pieCount);
 
     }
+    //////////////////////////////////////////////////
+    ///////////////////////////////////////////////////
+    /////////////////////////////////////////////////
     else if (sentMessage[0].toLowerCase() == "tts") {
         
         var newString = "";
@@ -169,9 +172,11 @@ bot.on('message', function (message) {
 
         //message.channel.send("Sent '" + newString + "' to channel: " + bot.channels.get(sendChannel).name);
         
+        message.delete();
+        
         bot.channels.get("689280164072652855").send(newString, { tts: true });
     }
-    else if (message.channel.id == "689280164072652855" && message.author.id != "549418373130223630") {
+    /*else if (message.channel.id == "689280164072652855" && message.author.id != "549418373130223630") {
         var newString = "";
 
         for (i = 0; i < message.content.split(" ").length; i++) {
@@ -181,7 +186,7 @@ bot.on('message', function (message) {
         //message.channel.send("Sent '" + newString + "' to channel: " + bot.channels.get(sendChannel).name);
         
         bot.channels.get("687871515185774612").send(newString, { tts: true });
-    }
+    }*/
     
     else if (sentMessage[0].toLowerCase() == "!muffin") {
 
