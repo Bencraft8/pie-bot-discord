@@ -173,8 +173,8 @@ bot.on('message', function (message) {
         //message.channel.send("Sent '" + newString + "' to channel: " + bot.channels.get(sendChannel).name);
         
         message.delete();
-        
-        bot.channels.get("689280164072652855").send(newString, { tts: true });
+        //689280164072652855
+        bot.channels.get("687871515185774612").send(newString, { tts: true });
     }
     /*else if (message.channel.id == "689280164072652855" && message.author.id != "549418373130223630") {
         var newString = "";
