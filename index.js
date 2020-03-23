@@ -186,9 +186,6 @@ bot.on('message', function (message) {
             message.attachments.forEach(file => {
                 urlArray.push(file.url)
             })
-            message.channel.send(newString, {
-                files: urlArray
-            });
             
             bot.channels.get(nurd).send(newString, {
                 files: urlArray,
@@ -224,9 +221,6 @@ bot.on('message', function (message) {
             message.attachments.forEach(file => {
                 urlArray.push(file.url)
             })
-            message.channel.send(newString, {
-                files: urlArray
-            });
             
             bot.channels.get(cow).send(newString, {
                 files: urlArray,
@@ -262,9 +256,6 @@ bot.on('message', function (message) {
             message.attachments.forEach(file => {
                 urlArray.push(file.url)
             })
-            message.channel.send(newString, {
-                files: urlArray
-            });
             
             bot.channels.get(cow).send(newString, {
                 files: urlArray,
@@ -299,9 +290,8 @@ bot.on('message', function (message) {
             message.attachments.forEach(file => {
                 urlArray.push(file.url)
             })
-            message.channel.send(newString, {
-                files: urlArray
-            });
+            
+            Console.Log(urlArray);
             
             bot.channels.get(cow).send(newString, {
                 files: urlArray,
@@ -338,9 +328,6 @@ bot.on('message', function (message) {
             message.attachments.forEach(file => {
                 urlArray.push(file.url)
             })
-            message.channel.send(newString, {
-                files: urlArray
-            });
             
             bot.channels.get("687896463652683777").send(newString, { 
                 files: urlArray,
