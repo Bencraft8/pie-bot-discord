@@ -183,8 +183,8 @@ bot.on('message', function (message) {
         if(message.attachments.length > 0) {
          
             let urlArray = []
-            for (let i = 0; i < message.attachments.length; i++) {
-                urlArray.push(message.attachments[i].url)
+            message.attachments.forEach(file => {
+                urlArray.push(file.url)
             }
             message.channel.send(newString, {
                 files: urlArray
@@ -221,8 +221,8 @@ bot.on('message', function (message) {
         if(message.attachments.length > 0) {
          
             let urlArray = []
-            for (let i = 0; i < message.attachments.length; i++) {
-                urlArray.push(message.attachments[i].url)
+            message.attachments.forEach(file => {
+                urlArray.push(file.url)
             }
             message.channel.send(newString, {
                 files: urlArray
@@ -259,8 +259,8 @@ bot.on('message', function (message) {
         if(message.attachments.length > 0) {
          
             let urlArray = []
-            for (let i = 0; i < message.attachments.length; i++) {
-                urlArray.push(message.attachments[i].url)
+            message.attachments.forEach(file => {
+                urlArray.push(file.url)
             }
             message.channel.send(newString, {
                 files: urlArray
@@ -296,8 +296,8 @@ bot.on('message', function (message) {
         if(message.attachments.length > 0) {
          
             let urlArray = []
-            for (let i = 0; i < message.attachments.length; i++) {
-                urlArray.push(message.attachments[i].url)
+            message.attachments.forEach(file => {
+                urlArray.push(file.url)
             }
             message.channel.send(newString, {
                 files: urlArray
@@ -335,8 +335,8 @@ bot.on('message', function (message) {
         if(message.attachments.length > 0) {
          
             let urlArray = []
-            for (let i = 0; i < message.attachments.length; i++) {
-                urlArray.push(message.attachments[i].url)
+            message.attachments.forEach(file => {
+                urlArray.push(file.url)
             }
             message.channel.send(newString, {
                 files: urlArray
