@@ -180,7 +180,7 @@ bot.on('message', function (message) {
             newString += " " + message.content.split(" ")[i];
         }
         
-        if(message.attachments.length > 0) {
+        if(message.attachments.size > 0) {
          
             let urlArray = []
             message.attachments.forEach(file => {
@@ -215,7 +215,7 @@ bot.on('message', function (message) {
             newString += " " + message.content.split(" ")[i];
         }
         
-        if(message.attachments.length > 0) {
+        if(message.attachments.size > 0) {
          
             let urlArray = []
             message.attachments.forEach(file => {
@@ -250,7 +250,7 @@ bot.on('message', function (message) {
             newString += " " + message.content.split(" ")[i];
         }
         
-        if(message.attachments.length > 0) {
+        if(message.attachments.size > 0) {
          
             let urlArray = []
             message.attachments.forEach(file => {
@@ -284,7 +284,7 @@ bot.on('message', function (message) {
             newString += " " + message.content.split(" ")[i];
         }
         
-        if(message.attachments.length > 0) {
+        if(message.attachments.size > 0) {
          
             let urlArray = []
             message.attachments.forEach(file => {
@@ -322,7 +322,7 @@ bot.on('message', function (message) {
             newString += " " + message.content.split(" ")[i];
         }
         
-        if(message.attachments.length > 0) {
+        if(message.attachments.size > 0) {
          
             let urlArray = []
             message.attachments.forEach(file => {
