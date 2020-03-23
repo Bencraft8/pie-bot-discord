@@ -185,7 +185,7 @@ bot.on('message', function (message) {
             let urlArray = []
             message.attachments.forEach(file => {
                 urlArray.push(file.url)
-            }
+            })
             message.channel.send(newString, {
                 files: urlArray
             });
@@ -223,7 +223,7 @@ bot.on('message', function (message) {
             let urlArray = []
             message.attachments.forEach(file => {
                 urlArray.push(file.url)
-            }
+            })
             message.channel.send(newString, {
                 files: urlArray
             });
@@ -261,7 +261,7 @@ bot.on('message', function (message) {
             let urlArray = []
             message.attachments.forEach(file => {
                 urlArray.push(file.url)
-            }
+            })
             message.channel.send(newString, {
                 files: urlArray
             });
@@ -298,7 +298,7 @@ bot.on('message', function (message) {
             let urlArray = []
             message.attachments.forEach(file => {
                 urlArray.push(file.url)
-            }
+            })
             message.channel.send(newString, {
                 files: urlArray
             });
@@ -337,7 +337,7 @@ bot.on('message', function (message) {
             let urlArray = []
             message.attachments.forEach(file => {
                 urlArray.push(file.url)
-            }
+            })
             message.channel.send(newString, {
                 files: urlArray
             });
