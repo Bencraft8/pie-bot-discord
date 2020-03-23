@@ -55,6 +55,11 @@ var oddResponses = ["I'll let you know later.", /*"Why are you asking me?",*/ "Y
 
 var adjectives = ["delicious", "tasty", "scrumptious", "heavenly", "delectable", "delightful", "yummy"]
 
+var cow = "689289906966757406";
+var nurd = "689289950109106220";
+var q = "689289981235167245";
+var bacon = "689290003473367041";
+
 bot.on('ready', function () {
     console.log("Ready!");
     bot.channels.get("650446608256729130").fetchMessages({ limit: 1 }).then(messages => {
@@ -162,55 +167,192 @@ bot.on('message', function (message) {
         
         message.channel.send(newString, { tts: true });
     }
-    //channels
-    //cow:    689289906966757406
-    //nurd:   689289950109106220
-    //q:      689289981235167245
-    //bacon:  689290003473367041
-    else if (message.channel.id == "689289906966757406" && message.author.id != "549418373130223630") { //in COWs channel
-        var newString = "";
-
-        for (i = 0; i < message.content.split(" ").length; i++) {
-            newString += " " + message.content.split(" ")[i];
-        }
-
-        bot.channels.get("689289950109106220").send(newString, { tts: true });
-        bot.channels.get("689289981235167245").send(newString, { tts: true });
-        bot.channels.get("689290003473367041").send(newString, { tts: true });
-    }
-    else if (message.channel.id == "689289950109106220" && message.author.id != "549418373130223630") {//in NURDs channel
+    // channels
+    // cow = "689289906966757406";
+    // nurd = "689289950109106220";
+    // q = "689289981235167245";
+    // bacon = "689290003473367041";
+    else if (message.channel.id == cow && message.author.id != "549418373130223630") { //in COWs channel
+        
         var newString = "";
 
         for (i = 0; i < message.content.split(" ").length; i++) {
             newString += " " + message.content.split(" ")[i];
         }
         
-        bot.channels.get("689289906966757406").send(newString, { tts: true });
-        bot.channels.get("689289981235167245").send(newString, { tts: true });
-        bot.channels.get("689290003473367041").send(newString, { tts: true });
+        if(message.attachments.length > 0) {
+         
+            let urlArray = []
+            for (let i = 0; i < message.attachments.length; i++) {
+                urlArray.push(message.attachments[i].url)
+            }
+            message.channel.send(newString, {
+                files: urlArray
+            });
+            
+            bot.channels.get(nurd).send(newString, {
+                files: urlArray,
+                tts: true 
+            });
+            bot.channels.get(q).send(newString, { 
+                files: urlArray,
+                tts: true 
+            });
+            bot.channels.get(bacon).send(newString, { 
+                files: urlArray,
+                tts: true 
+            });
+            
+        } else {
+
+            bot.channels.get(nurd).send(newString, { tts: true });
+            bot.channels.get(q).send(newString, { tts: true });
+            bot.channels.get(bacon).send(newString, { tts: true });
+            
+        }
     }
-    else if (message.channel.id == "689289981235167245" && message.author.id != "549418373130223630") {//in Qs channel
+    else if (message.channel.id == nurd && message.author.id != "549418373130223630") {//in NURDs channel
         var newString = "";
 
         for (i = 0; i < message.content.split(" ").length; i++) {
             newString += " " + message.content.split(" ")[i];
         }
         
-        bot.channels.get("689289906966757406").send(newString, { tts: true });
-        bot.channels.get("689289950109106220").send(newString, { tts: true });
-        bot.channels.get("689290003473367041").send(newString, { tts: true });
-    }else if (message.channel.id == "689290003473367041" && message.author.id != "549418373130223630") {//in BACONs channel
+        if(message.attachments.length > 0) {
+         
+            let urlArray = []
+            for (let i = 0; i < message.attachments.length; i++) {
+                urlArray.push(message.attachments[i].url)
+            }
+            message.channel.send(newString, {
+                files: urlArray
+            });
+            
+            bot.channels.get(cow).send(newString, {
+                files: urlArray,
+                tts: true 
+            });
+            bot.channels.get(q).send(newString, { 
+                files: urlArray,
+                tts: true 
+            });
+            bot.channels.get(bacon).send(newString, { 
+                files: urlArray,
+                tts: true 
+            });
+            
+        } else {
+        
+            bot.channels.get(cow).send(newString, { tts: true });
+            bot.channels.get(q).send(newString, { tts: true });
+            bot.channels.get(bacon).send(newString, { tts: true });
+            
+        }
+    }
+    else if (message.channel.id == q && message.author.id != "549418373130223630") {//in Qs channel
         var newString = "";
 
         for (i = 0; i < message.content.split(" ").length; i++) {
             newString += " " + message.content.split(" ")[i];
         }
+        
+        if(message.attachments.length > 0) {
+         
+            let urlArray = []
+            for (let i = 0; i < message.attachments.length; i++) {
+                urlArray.push(message.attachments[i].url)
+            }
+            message.channel.send(newString, {
+                files: urlArray
+            });
+            
+            bot.channels.get(cow).send(newString, {
+                files: urlArray,
+                tts: true 
+            });
+            bot.channels.get(nurd).send(newString, { 
+                files: urlArray,
+                tts: true 
+            });
+            bot.channels.get(bacon).send(newString, { 
+                files: urlArray,
+                tts: true 
+            });
+            
+        } else {
+        
+            bot.channels.get(cow).send(newString, { tts: true });
+            bot.channels.get(nurd).send(newString, { tts: true });
+            bot.channels.get(bacon).send(newString, { tts: true });
+            
+        }
+    }else if (message.channel.id == bacon && message.author.id != "549418373130223630") {//in BACONs channel
+        var newString = "";
 
-        bot.channels.get("689289906966757406").send(newString, { tts: true });
-        bot.channels.get("689289950109106220").send(newString, { tts: true });
-        bot.channels.get("689289981235167245").send(newString, { tts: true });
+        for (i = 0; i < message.content.split(" ").length; i++) {
+            newString += " " + message.content.split(" ")[i];
+        }
+        
+        if(message.attachments.length > 0) {
+         
+            let urlArray = []
+            for (let i = 0; i < message.attachments.length; i++) {
+                urlArray.push(message.attachments[i].url)
+            }
+            message.channel.send(newString, {
+                files: urlArray
+            });
+            
+            bot.channels.get(cow).send(newString, {
+                files: urlArray,
+                tts: true 
+            });
+            bot.channels.get(nurd).send(newString, { 
+                files: urlArray,
+                tts: true 
+            });
+            bot.channels.get(q).send(newString, { 
+                files: urlArray,
+                tts: true 
+            });
+            
+        } else {
+
+            bot.channels.get(cow).send(newString, { tts: true });
+            bot.channels.get(nurd).send(newString, { tts: true });
+            bot.channels.get(q).send(newString, { tts: true });
+            
+        }
     }
-    
+    else if (message.channel.id == "687896463652683777" && message.author.id != "549418373130223630") { //in d channel.. TESTING
+        
+        var newString = "";
+
+        for (i = 0; i < message.content.split(" ").length; i++) {
+            newString += " " + message.content.split(" ")[i];
+        }
+        
+        if(message.attachments.length > 0) {
+         
+            let urlArray = []
+            for (let i = 0; i < message.attachments.length; i++) {
+                urlArray.push(message.attachments[i].url)
+            }
+            message.channel.send(newString, {
+                files: urlArray
+            });
+            
+            bot.channels.get("687896463652683777").send(newString, { 
+                files: urlArray,
+                tts: true 
+            });
+            
+        } else {
+
+            bot.channels.get("687896463652683777").send(newString, { tts: true });
+            
+        }
+    }
     else if (sentMessage[0].toLowerCase() == "!muffin") {
 
         var randomNum = Math.floor(Math.random() * 101);
