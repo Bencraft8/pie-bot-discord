@@ -364,7 +364,7 @@ bot.on('message', function (message) {
 
         pieCount++
         //
-        newMuffin= " special birthday muffin";
+        // newMuffin= " special birthday muffin";
         //
         pieAdj = adjectives[Math.floor(Math.random() * adjectives.length)];
 
