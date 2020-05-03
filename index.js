@@ -99,7 +99,7 @@ bot.on('message', function (message) {
                 newPie = commonPies[Math.floor(Math.random() * commonPies.length)];
         }
         
-        newPie = " a birthday pie";
+        //newPie = " birthday pie";
 
         pieCount++
 
