@@ -40,7 +40,7 @@ var legendaryMuffins = [" Kecatas' 'special' muffin"];
 //-----------------------------------------------------------------------------
 
 var potatoes = [" some mashed potatoes", " some french fries", " a baked potato", " some hash browns", " some tater tots", " some potato chips",
-    " some loaded potato skins", " some potato pancakes", " some potato gnocci", " some potato salad", " some potato bread", " some pocket potatoes"];
+    " some loaded potato skins", " some potato pancakes", " some potato gnocchi", " some potato salad", " some potato bread", " some pocket potatoes"];
 
 //-----------------------------------------------------------------------------
 
