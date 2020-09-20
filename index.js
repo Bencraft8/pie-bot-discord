@@ -128,8 +128,9 @@ bot.on('message', function (message) {
         }
 
         else {
-            var test = (sentMessage[0].toLowerCase() == "!pierate") ? "Arrrgh, " : "Here, " 
-            message.channel.send(test + piePerson + "! " + sendText + pieAdj + newPie + "! There have been " + pieCount + " desserts given out on Discord.").then(function (botSentMessage) {
+            var greeting = (sentMessage[0].toLowerCase() == "!pierate") ? "Arrrgh, " : "Here, " 
+            var kim = (sentMessage[0].toLowerCase() == "!pierate") ? "! Kim wants ye to have a slice of 'er " : "! Kim wants you to have a slice of her " 
+            message.channel.send(greeting + piePerson + "! Kim wants you to have a slice of her " + pieAdj + newPie + "! There have been " + pieCount + " desserts given out on Discord.").then(function (botSentMessage) {
 
                 switch (true) {
                     case (pieCount.toString().includes("69")):
