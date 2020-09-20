@@ -7,8 +7,6 @@ require('events').EventEmitter.defaultMaxListeners = 20;
 
 var pieCount;
 
-var sendText = "Kim wants you to have a slice of her ";
-
 var commonPies = [" pumpkin pie", " coconut cream pie", " banana cream pie", " strawberry rhubarb pie", " chocolate cream pie", " blueberry pie", " ice cream pie",
     " peach pie", " pear pie", " chicken pot pie", " cranberry pie", " pineapple pie", " turtle pie", " chocolate hazelnut pie", " mixed berry pie", " chestnut pie"
 ];
@@ -79,6 +77,7 @@ bot.on('message', function (message) {
 
     if (sentMessage[0].toLowerCase() == "!pie" || sentMessage[0].toLowerCase() == "!pierate") {
 
+        var sendText = "Kim wants you to have a slice of her ";
         var randomNum = Math.floor(Math.random() * 101);
         var randomNumAdj = Math.floor(Math.random() * 7) + 1;
 
@@ -109,7 +108,7 @@ bot.on('message', function (message) {
 
         if (randomNum2 > 95) {
 
-            message.channel.send("Sorry, " + piePerson + ", but I couldn't resist. I ate your " + pieAdj + newPie + ". There have been " + pieCount + " desserts given out on Discord.").then(function (botSentMessage) {
+            message.channel.send("Sorry, ${piePerson}, but I couldn't resist. I ate your ${pieAdj} #{newPie}. There have been ${pieCount} desserts given out on Discord.").then(function (botSentMessage) {
 
                 switch (true) {
                     case (pieCount.toString().includes("69")):
