@@ -130,7 +130,7 @@ bot.on('message', function (message) {
         }
 
         else {
-            var test = (sentMessage[0].toLowerCase() == "!pierate") ? "Here, " : "Arrrgh! "
+            var test = (sentMessage[0].toLowerCase() == "!pierate") ? "Arrrgh, " : "Here, " 
             message.channel.send(test + piePerson + "! " + sendText + pieAdj + newPie + "! There have been " + pieCount + " desserts given out on Discord.").then(function (botSentMessage) {
 
                 switch (true) {
