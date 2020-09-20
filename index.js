@@ -77,7 +77,7 @@ bot.on('message', function (message) {
 
     var piePerson = sentMessage[1] ? sentMessage[1] : message.author;
 
-    if (sentMessage[0].toLowerCase() == "!pie") {
+    if (sentMessage[0].toLowerCase() == "!pie" || sentMessage[0].toLowerCase() == "!pierate") {
 
         var randomNum = Math.floor(Math.random() * 101);
         var randomNumAdj = Math.floor(Math.random() * 7) + 1;
@@ -130,8 +130,8 @@ bot.on('message', function (message) {
         }
 
         else {
-
-            message.channel.send("Here, " + piePerson + "! " + sendText + pieAdj + newPie + "! There have been " + pieCount + " desserts given out on Discord.").then(function (botSentMessage) {
+            var test = (sentMessage[0].toLowerCase() == "!pierate") ? "Here, " : "Arrrgh! "
+            message.channel.send(test + piePerson + "! " + sendText + pieAdj + newPie + "! There have been " + pieCount + " desserts given out on Discord.").then(function (botSentMessage) {
 
                 switch (true) {
                     case (pieCount.toString().includes("69")):
