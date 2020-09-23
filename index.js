@@ -583,6 +583,11 @@ bot.on('message', function (message) {
         });
 
     }
+    else if ((sentMessage[0].toLowerCase() == "give" && sentMessage[1].toLowerCase() == "birth" && message.author.id != "549418373130223630") {
+        
+        message.react("😐")
+
+    }
     else if (sentMessage[0].toLowerCase() == "!scale" && sentMessage[1] && sentMessage[2]) {
         message.channel.fetchMessages({ limit: 5 }).then(messagesss => {
             if (Number.isInteger(parseInt(sentMessage[1], 10))) {
