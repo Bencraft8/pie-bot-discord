@@ -583,7 +583,7 @@ bot.on('message', function (message) {
         });
 
     }
-    else if ((sentMessage[0].toLowerCase() == "give" && sentMessage[1].toLowerCase() == "birth" && message.author.id != "549418373130223630") {
+    else if (sentMessage[0].toLowerCase() == "give" && sentMessage[1].toLowerCase() == "birth" && message.author.id != "549418373130223630") {
         
         message.react("😐")
 
