@@ -345,7 +345,7 @@ bot.on('message', function (message) {
     }
     
     else if (sentMessage[0].toLowerCase() == "!muffin") {
-/*
+
         var randomNum = Math.floor(Math.random() * 101);
         var randomNumAdj = Math.floor(Math.random() * 7) + 1;
 
@@ -400,9 +400,8 @@ bot.on('message', function (message) {
 
             });
 
-        }*/
-        message.channel.send("huh?")
-        //bot.channels.get("650446608256729130").send(pieCount);
+        }
+        bot.channels.get("650446608256729130").send(pieCount);
 
     }
     else if (sentMessage[0].toLowerCase() == "!potato") {
