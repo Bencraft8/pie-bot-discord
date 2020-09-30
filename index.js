@@ -512,6 +512,7 @@ bot.on('message', function (message) {
             "!menu" + "\n" +
             "!ask" + "\n" +
             "!scale (max) (question)" + "\n" +
+            "!coinflip" + "\n" +
             "tts (msg for text-to-speech; for mobile users)"
         );
     }
