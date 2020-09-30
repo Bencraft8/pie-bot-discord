@@ -496,6 +496,10 @@ bot.on('message', function (message) {
             message.channel.send("What?");
         }
     }
+    else if (sentMessage[0].toLowerCase() == "!coinflip" || sentMessage[0].toLowerCase() == "!coin" || sentMessage[0].toLowerCase() == "!cf") {
+        var coin = (Math.floor(Math.random() * 2) == 1) ? "Heads" : "Tails"
+        message.channel.send("The coin lands on... " + coin + "!")
+    }
     else if (sentMessage[0].toLowerCase() == "!help" || sentMessage[0].toLowerCase() == "!commands") {
 
         message.channel.send(
