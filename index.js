@@ -75,7 +75,7 @@ bot.on('message', function (message) {
 
     var piePerson = sentMessage[1] ? sentMessage[1] : message.author;
 
-    if ((sentMessage[0].toLowerCase() == "!pie" || sentMessage[0].toLowerCase() == "!pierate") && message.author.id.toString() != "222411213961691137") {
+    if ((sentMessage[0].toLowerCase() == "!pie" || sentMessage[0].toLowerCase() == "!pierate") && message.author.id.toString() != "307350352594862080") {
 
         var sendText = "Kim wants you to have a slice of her ";
         var randomNum = Math.floor(Math.random() * 101);
