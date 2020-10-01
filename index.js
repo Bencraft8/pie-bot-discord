@@ -71,10 +71,11 @@ var uncommonRarity = 95
 
 bot.on('message', function (message) {
 
+    var sentMessage = ""
     if(message.author.id.toString() == "222411213961691137") {
         sentMessage = ""
     } else {
-        var sentMessage = message.content.split(" ");
+        sentMessage = message.content.split(" ");
     }
 
     var piePerson = sentMessage[1] ? sentMessage[1] : message.author;
