@@ -72,9 +72,8 @@ var uncommonRarity = 95
 bot.on('message', function (message) {
 
     var sentMessage = message.content.split(" ");
-    if(message.author.id.toString() == "189510396569190401") {
+    if(message.author.id.toString() == "222411213961691137") {
         sentMessage = ""
-        message.react("🚫")
     }
 
     var piePerson = sentMessage[1] ? sentMessage[1] : message.author;
