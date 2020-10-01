@@ -72,7 +72,7 @@ var uncommonRarity = 95
 bot.on('message', function (message) {
 
     var sentMessage = message.content.split(" ");
-    if(message.author.id.toString() == "307350352594862080") {
+    if(message.author.id.toString() == "189510396569190401") {
         sentMessage = ""
     }
 
