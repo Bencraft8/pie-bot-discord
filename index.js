@@ -29,7 +29,7 @@ var commonMuffins = [" banana nut muffin", " blueberry muffin", " lemon poppy se
 
 var uncommonMuffins = [" chocolate chip muffin", " cornbread muffin", " pumpkin muffin", " coffee cake muffin", " zucchini muffin", " maple walnut muffin", " pecan muffin"
 ];
-
+ 
 var rareMuffins = [" chocolate chunk muffin", " apple cinnamon muffin", " snickerdoodle muffin"
 ];
 
